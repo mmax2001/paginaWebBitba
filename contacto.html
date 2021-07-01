@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto Bitba</title>
+</head>
+	
+<body>
+	
+	<!-- inicio encabezado -->
+<div class="contenedorGrid">
+	<div class="header">
+		<div class="menuModo1">
+			<i class="fa fa-adjust" style="font-size:18px"></i>
+			<button onclick="myFunction()" class="boton__textoModo">Modo</button>
+			
+		</div>
+		<div>
+			<ul class="menuLista1">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="tienda.html">Tienda</a></li>
+				<li><a href="catalogo.html">Catalogo</a></li>
+				<li><a href="soporte.html">Soporte</a></li>
+				<li><a href="contacto.html">Contacto</a></li>				
+			</ul>
+		</div>
+		<div class="menuIdioma1">	
+			<p>Selecciona tu idioma</p>
+			<select name="idioma" style="margin-left: 7px;" class="boton__textoModo">
+				<option value="Spanish"> Spanish </option>
+				<option value="English"> English </option>
+			</select>
+		</div>
+	</div>
+	
+	
+	<div class="main1">
+		<h1 class="h1 animate__animated animate__flipInY">Contacto Bitba</h1>
+		<form action="envio.php" method="POST" enctype="multipart/form-data">
+			<div>
+				<fieldset class="boxFormulario">
+					<legend class="card_titulo">Complete el formulario</legend>
+					<label for="nombreyapellido"> Nombre y Apellido </label>
+					<div style="margin-bottom: 20px;">
+						<input type="text" name="nombreyapellido" placeholder="Escriba aqui su Nombre y Apellido " id="" maxlength="150" size="45%" class="inputContacto">
+					</div>
+					<label for="correoelectronico"> Correo Electronico </label>
+					<div style="margin-bottom: 20px;">
+					<input type="email" name="correoelectronico" placeholder="Escriba aqui su email" id="" maxlength="100" size="45%" class="inputContacto">
+					</div>
+					<label for="fraseTexto"> Envianos tu consulta </label>
+					<div class="frase__texto">
+						<textarea style="height: 80px;width: 100%;margin-bottom: 20px;" class="inputContacto">Escriba aqui su consulta</textarea>
+					</div>						
+					<label> Si ademas le gustaria recibir novedades</label>
+					<br>
+					<label> en su casilla de correo marque la casilla </label>
+					<div style="margin-bottom: 20px;">
+						<input type="checkbox" name="recibenovedades" value="1">
+					</div>
+					<div class="boton">
+						<input type="submit" name="enviar" value="Enviar" class="boton__texto boton--submit" style="width: 100px;">
+					</div>
+					<div class="boton">
+						<input type="reset" name="limpiar" value="Limpiar Contenido" class="boton__texto boton--submit">
+					</div>						
+				</fieldset>
+			</div>
+		</form>
+	</div>
+	<div class="ads">
+		
+	</div>	
+	<div id="pieDePagina1">
+			
+			<div class="pagos1">
+				<p class="leyendaPagosAceptados">Aceptamos</p>
+				<i class="fa fa-bitcoin" style="font-size:24px"></i>
+				<i class="fa fa-cc-visa" style="font-size:24px"></i>
+				<i class="fa fa-cc-discover" style="font-size:24px"></i>					
+			</div>
+
+			<div class="redes1">	
+				<p style="margin-bottom: 10px;">Seguinos en nuestras redes sociales</p>
+				<i class="fa fa-whatsapp" style="font-size:24px"></i>						
+				<i class="fa fa-telegram" style="font-size:24px"></i>
+				<i class="fa fa-instagram" style="font-size:24px"></i>
+				<i class="fa fa-facebook-official" style="font-size:24px"></i>
+				<p style="margin-top: 10px;">todos los derechos reservados</p>
+			</div>	
+			
+	</div>
+	<!--
+	<header>
+		 
+		<div class="encabezado">
+				<div class="menuModo">
+					<i class="fa fa-adjust" style="font-size:18px"></i>
+					<button onclick="myFunction()" class="boton__textoModo">Modo</button>
+					
+				</div>
+				<nav>
+					<ul class="menuLista">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="tienda.html">Tienda</a></li>
+						<li><a href="catalogo.html">Catalogo</a></li>
+						<li><a href="soporte.html">Soporte</a></li>
+						<li><a href="contacto.html">Contacto</a></li>				
+					  </ul>
+				</nav>
+				<div class="menuIdioma">	
+					<p>Selecciona tu idioma</p>
+					<select name="idioma" style="margin-left: 7px;" class="boton__textoModo">
+						<option value="Spanish"> Spanish </option>
+						<option value="English"> English </option>
+					</select>
+				</div>
+		</div> 		
+			
+			<h1 class="animate__animated animate__flipInY">Contactanos</h1>
+	
+	</header>
+	-->
+	<!-- fin encabezado -->
+
+	<!-- contenido principal -->
+	
+	<!-- cierre contenido principal -->	
+
+
+	<!-- apertura de pie de pagina --> 
+
+	
+	<!-- cierre de pie de pagina -->
+</div>	
+
+</body>
+<!-- script dark-mode -->
+<script>
+	function myFunction() {
+	var element = document.body;
+	element.classList.toggle("dark-mode");
+	}
+</script>
+</html>	

@@ -1,0 +1,497 @@
+/* propiedades y estilos de seccion contacto */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: 'Ubuntu','Ubuntu-Regular';
+	font-size: 2rem;	
+	text-align: center;
+	margin: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.animate__fadeInDownBig{
+	animation-duration: 1s;	
+}
+
+.animate__bounceIn{
+	animation-delay: 1s;
+}
+.animate__flipInY{
+	animation-delay:10ms;
+}
+
+
+h2 {
+	font-size: 1.5rem;
+	font-family: 'Ubuntu','Ubuntu-Regular';
+	color: #4E4C59;
+	margin: 5px;
+	margin-bottom: 3px;
+}
+
+.contenedorGrid{
+	display: grid;
+	grid-template-areas: "header header header"
+						 "main1 main1 ads"
+						 "pieDepagina1 pieDePagina1 ads";
+	/*grid-gap:10px*/
+		
+}
+
+.header{
+	grid-area: header;
+	min-height: 120px;
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.header .menuModo1{
+	grid-area: header;
+	justify-items: left;
+	justify-content: left;
+	margin-left: 25px;
+	align-items: center;
+}
+
+.header ul {
+	list-style-type: none;
+	align-items: center;
+	margin-left: 45px;
+	padding: auto;	
+}
+
+.header li{
+	grid-column-start: 2;
+	grid-row-start: 1;
+	grid-area: header;
+	display:inline-flex;	
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: 'Ubuntu','Ubuntu-Light';
+	font-size: 18px;
+	color: #000;
+	background-color:lightgray ;
+	text-decoration-color:#000 ;	
+}
+
+.header .menuIdioma1{
+	grid-column-start:3;
+	grid-row-start: 1;
+	font-family: 'Ubuntu','Ubuntu-Light';
+	display: inline-block;		
+	margin-right: 15px;
+	text-align: end;
+	padding: 0.5%;		
+}
+
+.main1{
+	grid-area:main1;
+	grid-column-start: 2;
+	grid-row-start: 2 ;
+	justify-content: left;
+	margin-right: 300px; 
+	align-items: center;
+}
+
+.ads{
+	grid-area: ads;
+}
+
+#pieDePagina1 {
+	grid-area: pieDePagina1;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end:3;	
+}
+
+#pieDePagina1 .pagos1{
+	grid-column-start: 1; 
+	grid-row-start:3;
+	grid-row-end: 3;
+	justify-items: left;
+	font-size: 17px;
+	font-family: 'Ubuntu','Ubuntu-Regular';
+	font-style: italic;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+}
+/*
+.pieDePagina1 .pieDePagina1--pagos1{
+	justify-items: start;
+	justify-content: left;
+	display: inline-block;
+	flex-direction: row;
+	align-items:start;
+	padding: 10px;	
+}
+*/
+#pieDePagina1 .redes1 {
+	grid-column-start:2 ;
+	grid-row-start: 3;
+	justify-items: right;
+	align-items: center;
+	font-family: 'Ubuntu','Ubuntu-Light';
+	font-weight: 300;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.encabezado {	
+	min-height: 120px;
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menuModo {
+	margin-left: 25px;
+	align-items: center;
+
+}
+
+.menuLista {
+	list-style: none;
+	align-items: center;
+	margin-left: 45px;
+	padding: auto;
+}
+
+.menuLista li {
+	display: inline-block;	
+	padding: 10px;
+	border-radius: 10px;
+	font-family: 'Ubuntu','Ubuntu-Light';
+	font-size: 18px;
+	color: #000;
+	background-color:lightgray ;
+	text-align: center;
+	text-decoration-color:#000 ;
+}
+
+.menuIdioma {	
+	font-family: 'Ubuntu','Ubuntu-Light';
+	display: inline-block;		
+	margin-right: 15px;
+	text-align: end;
+	padding: 0.5%;		
+}
+
+
+.leyendaPagosAceptados {
+	font-size: 17px;
+	font-family: 'Ubuntu','Ubuntu-Regular';
+	font-style: italic;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+}
+
+select {
+	margin-left: 5px;
+	margin-bottom: 0%;	
+}
+
+
+li a:hover {
+	background-color: #AAAEB7;
+}
+
+.pieDePagina {
+	padding:25px;
+	text-align: center;
+}
+
+.pieDePagina--redes {
+	font-family: 'Ubuntu','Ubuntu-Light';
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.pieDePagina--pagos {
+	padding-right: 90%;
+}
+
+table {
+	padding: auto;
+	margin: auto;
+	margin-left: auto;
+	widows: 150px;
+	height: 150px;
+	background-color: lightgray;
+	color: #000;
+	/*border-collapse: collapse;*/
+	/*background-color: #9A8A83;*/
+	/*background-color:#8E7A72 ;*/
+}
+
+tr {
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	text-align: center;	
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+td {
+	text-align: center;
+}
+
+.bordesRedondeados{
+	border-radius: 10px;
+}
+
+#Italica {
+	font-style: italic;
+}
+
+body {
+	/*background: #F6F6FE;*/
+	font-family: 'Open Sans', sans-serif;
+	/*background-image: url("imagenes/background4.jpg");*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*background-color: #8C4C3E;*/
+	background-color: #DBB48B;	
+	color: black;
+	/*background-color: #FBAB7E;
+	background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+	*/
+}
+
+.dark-mode {
+	background-color: black;
+	color: white;
+}
+
+legend {
+	text-align: center;
+	background-color: gray;
+	color: white;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+.boxFormulario {
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	font-size: large;
+	color: black;
+	align-content: center;
+	background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
+	/*background-color:lightgray;*/
+  	border: 3px solid #8E7A72;
+  	padding: 14px;
+	max-width:max-content;
+  	margin: auto;
+	border-radius: 10px;
+	/*background-image: url("imagenes/representantes-atencion-al-cliente.jpg"); 
+	background-size: 200px;
+	background-repeat: no-repeat;*/
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.contenedor { 
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;	
+}
+
+.contenedor__cards {
+	margin: 70px 0;
+}
+
+.card {
+	background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
+	/*background: #A4B0BC;*/
+	/*background: #78828C;*/
+	/*background:#D5D5D5;*/
+	/*background: #FFF;*/
+	border-radius: 15px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-bottom: 70px;
+}
+
+.card__thumbnail {
+	width: 450px;
+	height: 200px;
+	margin-right: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.card__img--medium {
+	width: 50%;
+	border-radius: 15px;
+}
+
+.card__img--large {	
+	width: 60%;
+	border-radius: 15px;
+}
+
+.card__img {
+	width: 25%;
+}
+
+.card__titulo {
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	/*font-family: 'Raleway', sans-serif;*/
+	font-size: 30px;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+.card__enlace {
+	color: #000;
+}
+
+.card__extracto {
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	line-height: 28px;
+	color:black;
+	/*color: #6D6D6D;*/
+	margin-bottom: 20px;
+}
+
+.boton {
+	border: none;
+	min-width: 140px;
+	height: 50px;
+	padding: 0 20px;
+	/*background: #000;*/
+	color: #fff;
+	display: inline-block;
+	border-radius: 10px;
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #403CC2;
+	transition: .3s ease all;
+}
+.boton__textoModo {
+	font-family: 'Ubuntu','Ubuntu-Light';
+	font-size: 16px;
+	text-align: center;
+	border-radius: 5px;
+
+}
+
+.boton__texto {
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	font-size: large;
+	font-weight: 400;
+	text-align: center;
+	height: auto;	
+}
+
+.boton:hover {
+	background: #1B1881;
+	text-decoration: none;
+}
+
+.boton--absolute {
+	position: absolute;
+	right: 20px;
+	bottom: -25px;
+}
+
+.boton--absoluteLeft {
+	position: absolute;
+	left: 590px;
+	bottom: -25px;
+}
+.boton--submit {
+	height: auto;
+	width: auto;
+	color: #fff;
+	background: #403CC2;
+	border-radius: 5px;
+	border: 0px;	
+}
+
+.boton--verde {
+	background: #7BA771;
+}
+
+.boton--verde:hover {
+	background: #437837;
+}
+
+.frase {
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	text-align: center;
+	margin: 70px 0;
+}
+
+.frase__texto {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	/*font-family: 'Raleway', sans-serif;*/
+	font-weight: 600;
+	font-style: italic;
+}
+
+.frase__texto--titulo {
+	margin-bottom: 10px;
+	margin-left: 10px;
+	font-size: 25px;
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	/*font-family: 'Raleway', sans-serif;*/
+	font-weight: 500;
+	font-style: italic;
+}
+
+.frase__texto--soporte {
+	margin-bottom: 10px;
+	margin-left: 10px;
+	font-size: 15px;
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	/*font-family: 'Raleway', sans-serif;*/
+	font-weight: 200;
+}
+
+.frase__texto--inicio {
+	margin-bottom: 15px;
+	margin-left: 15px;
+	font-size: 15px;
+	font-family: 'Ubuntu', 'Ubuntu-Light';
+	/*font-family: 'Raleway', sans-serif;*/
+	font-weight: 200;
+}
+
+.inputContacto {
+	width: 300px;
+	height: 30px;
+	transition: all 1s;
+}
+
+.inputContacto:focus {
+	width: 330px;
+	font-size: 20px;
+}
