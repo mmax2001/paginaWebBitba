@@ -1,232 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<link rel="stylesheet" href="css/style.css">
-	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Catalogo de Productos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Productos</title>
 </head>
 
 <body>
-	
-	<!-- inicio encabezado -->
-	<header id="volverArriba">
-		
-		<div class="encabezado">
-			<div class="menuModo">
-				<i class="fa fa-adjust" style="font-size:18px"></i>
-				<button onclick="myFunction()" class="boton__textoModo">Modo</button>
-				
-				<script>
-					function myFunction() {
-					   var element = document.body;
-					   element.classList.toggle("dark-mode");
-					}
-				</script>
-			</div>
-			<nav>
-				<ul class="menuLista">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="tienda.html">Tienda</a></li>
-					<li><a href="catalogo.html">Catalogo</a></li>
-					<li><a href="soporte.html">Soporte</a></li>
-			  		<li><a href="contacto.html">Contacto</a></li>				
-		  		</ul>
-			</nav>
-			<div class="menuIdioma">	
-				<p>Selecciona tu idioma</p>
-				<select name="idioma" style="margin-left: 7px;" class="boton__textoModo">
+
+    <!-- inicio encabezado -->
+    <header id="volverArriba">
+
+        <div class="encabezado">
+            <div class="menuModo">
+                <i class="fa fa-adjust"></i>
+                <button onclick="myFunction()" class="boton__textoModo">Modo</button>
+
+                <script>
+                    function myFunction() {
+                        var element = document.body;
+                        element.classList.toggle("dark-mode");
+                    }
+                </script>
+            </div>
+            <nav>
+                <ul class="menuLista">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menuIdioma">
+                <p>Selecciona tu idioma</p>
+                <select name="idioma" style="margin-left: 7px;" class="boton__textoModo">
 					<option value="Spanish"> Spanish </option>
 					<option value="English"> English </option>
 				</select>
-			</div>
-		</div> 		
+            </div>
+        </div>
 
-		<h1 class="animate__animated animate__flipInY" style="margin-bottom: 30px;">Catalogo de Productos en Bitba</h1>
+        <h1 class="animate__animated animate__flipInY" style="margin-bottom: 30px;">Catalogo de Productos en Bitba</h1>
 
-	</header>
-	<!-- fin encabezado -->
+    </header>
+    <!-- fin encabezado -->
 
-	<!-- contenido principal -->
-	<main>
-	
-		<table width="90%" border="1" cellpadding="10" padding="10px">
-			<tr>
-				<th>Producto</th>
-				<th>Descripcion</th>
-				<th>Dimensiones(alto cm x largo cm x ancho cm)</th>
-				<th>Peso</th>
-				<th>Imagen</th>
-			</tr>
+    <!-- contenido principal -->
+    <main>
 
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>10 x 15 x 5</td>
-				<td>0.10 kg</td>
-				<td><img src="imagenes/cablecpupcie.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>adaptador riser pcie para conectar placa de video</td>
-				<td>20 x 10 x 5</td>
-				<td>0.20 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>adaptador riser multiple para conectar varias placas de video</td>
-				<td>3 x 10 x 10</td>
-				<td>0.60 kg</td>
-				<td><img src="imagenes/RiserMulti.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-			<tr>
-				<td>Adaptador</td>
-				<td>cable adaptador para conector cpu de fuente </td>
-				<td>20 x 10 x 5</td>
-				<td>0.4 kg</td>
-				<td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria"  class="bordesRedondeados"></td>
-			</tr>
-		</table>
-		<a href="#volverArriba" class="frase" style="padding:5% ;">Volver Arriba</a>
-	</main>
-	<!-- cierre contenido principal -->
+        <!-- <table width="90%" border="1" cellpadding="10" padding="10px"> -->
+        <div class="table" border="1" cellpadding="10" padding="10px">
+            <table class="table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripcion</th>
+                        <th>Dimensiones(alto cm x largo cm x ancho cm)</th>
+                        <th>Peso</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>10 x 15 x 5</td>
+                        <td>0.10 kg</td>
+                        <td><img src="imagenes/cablecpupcie.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>adaptador riser pcie para conectar placa de video</td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.20 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>adaptador riser multiple para conectar varias placas de video</td>
+                        <td>3 x 10 x 10</td>
+                        <td>0.60 kg</td>
+                        <td><img src="imagenes/RiserMulti.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td>20 x 10 x 5</td>
+                        <td>0.4 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="cryptomineria" class="bordesRedondeados"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="centrado">
+            <a href="#volverArriba" class="frase">Volver Arriba</a>
+        </div>
+    </main>
+    <!-- cierre contenido principal -->
 
-	<!-- apertura de pie de pagina --> 
-	<footer class="pieDePagina">
-		<ul>
-			<div class="pieDePagina--redes">	
-				<p style="margin-bottom: 10px;">Seguinos en nuestras redes sociales</p>
-				<i class="fa fa-whatsapp" style="font-size:24px"></i>						
-				<i class="fa fa-telegram" style="font-size:24px"></i>
-				<i class="fa fa-instagram" style="font-size:24px"></i>
-				<i class="fa fa-facebook-official" style="font-size:24px"></i>
-				<p style="margin-top: 10px;">todos los derechos reservados</p>
-			</div>
-			
-			<div class="pieDePagina--pagos">
-				<p class="leyendaPagosAceptados">Aceptamos</p>
-				<i class="fa fa-bitcoin" style="font-size:24px"></i>
-				<i class="fa fa-cc-visa" style="font-size:24px"></i>
-				<i class="fa fa-cc-discover" style="font-size:24px"></i>					
-			</div>
-		</ul>	
-	</footer>
-	<!-- cierre de pie de pagina -->
+    <!-- apertura de pie de pagina -->
+    <footer class="pieDePagina">
+        <ul>
+            <div class="pieDePagina--redes">
+                <p style="margin-bottom: 10px;">Seguinos en nuestras redes sociales</p>
+                <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                <i class="fa fa-telegram" style="font-size:24px"></i>
+                <i class="fa fa-instagram" style="font-size:24px"></i>
+                <i class="fa fa-facebook-official" style="font-size:24px"></i>
+                <p style="margin-top: 10px;">todos los derechos reservados</p>
+            </div>
 
-	<!-- script dark-mode -->
-	<script>
-		function myFunction() {
-			var element = document.body;
-			element.classList.toggle("dark-mode");
-		}
-	</script>
+            <div class="pieDePagina--pagos">
+                <p class="leyendaPagosAceptados">Aceptamos</p>
+                <i class="fa fa-bitcoin" style="font-size:24px"></i>
+                <i class="fa fa-cc-visa" style="font-size:24px"></i>
+                <i class="fa fa-cc-discover" style="font-size:24px"></i>
+            </div>
+        </ul>
+    </footer>
+    <!-- cierre de pie de pagina -->
+
+    <!-- script js de bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- script dark-mode -->
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <!-- script animate wow -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 </body>
 
 </html>
-
-
-
