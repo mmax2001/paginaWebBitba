@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -9,89 +10,192 @@
     <link rel="stylesheet" href="css/animate.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+
     <title>Soporte Bitba</title>
 </head>
 
 <body>
 
     <!-- inicio encabezado -->
+
     <header>
-        <div class="encabezado">
-            <div class="menuModo">
-                <i class="fa fa-adjust"></i>
-                <button onclick="myFunction()" class="boton__textoModo">Modo</button>
+        <!--nav-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/dibujo7.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="soporte.html">Soporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
+                </ul>
 
             </div>
-            <nav>
-                <ul class="menuLista">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tienda.html">Tienda</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <li><a href="soporte.html">Soporte</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="menuIdioma">
-                <p>Selecciona tu idioma</p>
-                <select name="idioma" style="margin-left: 7px;" class="boton__textoModo">
-					<option value="Spanish"> Spanish </option>
-					<option value="English"> English </option>
-				</select>
+            <div class="botonDarkMode">
+                <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                <span></span>
+                <span></span>
+                </button>
             </div>
-        </div>
-        <h1 class="animate__animated animate__flipInY">Soporte en Bitba</h1>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Idioma
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">English</a>
+
+                </div>
+            </div>
+        </nav>
     </header>
+
     <!-- fin de mi encabezado -->
 
     <!-- contenido principal -->
     <main>
-        <div class="contenedor">
-            <div class="contenedor__cards">
-                <div class="card">
-                    <img src="imagenes/soporte.jpg" class="card__img--medium">
-                    <div class="card__textos">
-                        <h3 class="frase__texto--titulo">Nuestro soporte tecnico y emocional ;-)</h3>
-                        <p class="frase__texto--soporte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias rerum magnam voluptatem iusto, quae omnis ratione, corrupti pariatur voluptate laudantium aliquid, quasi blanditiis nobis similique debitis. Similique velit minima
-                            nihil. Natus corrupti aut aperiam soluta, autem ea quasi repellat nesciunt asperiores maiores sed officia amet cupiditate maxime nihil dolores dignissimos vitae deleniti fugit ratione obcaecati sunt rem quos? Molestias, ab.
-                            Mollitia iure dolore suscipit, neque at vel quod eligendi optio blanditiis repellat ipsa magni id corporis impedit quae itaque quibusdam fugit? Quis molestiae nulla eos velit est? Pariatur, incidunt asperiores. Expedita at
-                            vitae dolorum deleniti minima reiciendis suscipit voluptatibus modi distinctio. Earum repudiandae soluta itaque molestiae magni suscipit minus explicabo aperiam quod saepe, deleniti culpa cupiditate similique laboriosam rerum
-                            aspernatur.
-                        </p>
+
+        <section class="contenedorCarrousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="imagenes/slide1b.jpg" alt="Soporte Tecnico">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Soporte Tecnico</h5>
+                            <p>...</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="imagenes/slide02.jpg" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Armado de equipos para mineria</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="imagenes/slide03.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Servicio post venta</h5>
+                            <p>...</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <section class="container contenedorServicios">
+
+            <article class="row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/mineria5.jpg" class="card-img-top" alt="soporte tecnico">
+                        <div class="card-body">
+                            <h5 class="card-title">Soporte Tecnico</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/mineria4.jpg" class="card-img-top" alt="armado y configuracion">
+                        <div class="card-body">
+                            <h5 class="card-title">Armado y Configuracion</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/mineria2.jpg" class="card-img-top" alt="servicio post venta">
+                        <div class="card-body">
+                            <h5 class="card-title">Servicio Post Venta</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
     </main>
     <!-- cierre contenido principal -->
 
     <!-- apertura de pie de pagina -->
-    <footer class="pieDePagina">
-        <ul>
-            <div class="pieDePagina--redes">
-                <p style="margin-bottom: 10px;">Seguinos en nuestras redes sociales</p>
-                <i class="fa fa-whatsapp" style="font-size:24px"></i>
-                <i class="fa fa-telegram" style="font-size:24px"></i>
-                <i class="fa fa-instagram" style="font-size:24px"></i>
-                <i class="fa fa-facebook-official" style="font-size:24px"></i>
-                <p style="margin-top: 10px;">todos los derechos reservados</p>
-            </div>
+    <div class="pieDePag1">
+        <div class="pagos1">
+            <p class="leyendaPagosAceptados">Aceptamos</p>
+            <i class="fa fa-bitcoin" style="font-size:24px"></i>
+            <i class="fa fa-cc-visa" style="font-size:24px"></i>
+            <i class="fa fa-cc-discover" style="font-size:24px"></i>
+        </div>
 
-            <div class="pieDePagina--pagos">
-                <p class="leyendaPagosAceptados">Aceptamos</p>
-                <i class="fa fa-bitcoin" style="font-size:24px"></i>
-                <i class="fa fa-cc-visa" style="font-size:24px"></i>
-                <i class="fa fa-cc-discover" style="font-size:24px"></i>
-            </div>
-        </ul>
-    </footer>
+        <div class="redes1">
+            <p>Seguinos en nuestras redes sociales</p>
+            <i class="fa fa-whatsapp" style="font-size:24px"></i>
+            <i class="fa fa-telegram" style="font-size:24px"></i>
+            <i class="fa fa-instagram" style="font-size:24px"></i>
+            <i class="fa fa-facebook-official" style="font-size:24px"></i>
+            <h6><strong>Horario de atención:</strong> de 9:00 a 17:30hs</h6>
+            <h6><strong>Telefono:</strong> 0800-0555-1234</h6>
+            <p>Todos los derechos reservados</p>
+        </div>
+    </div>
     <!-- cierre de pie de pagina -->
 
     <!-- script dark-mode -->
     <script>
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }
+        }
+    </script>
+
+    <script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
         }
     </script>
 
@@ -100,6 +204,11 @@
     <script>
         new WOW().init();
     </script>
+
+    <!--JS Boostrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
 </body>
 

@@ -39,7 +39,7 @@ h2 {
 
 h6 {
     font-size: 1rem;
-    font-family: 'Ubuntu', 'Ubuntu-Light';
+    font-family: 'Ubuntu', 'Ubuntu-Regular';
 }
 
 .contenedorGrid {
@@ -51,6 +51,12 @@ h6 {
 
 .navbar {
     grid-area: header;
+    /* min-height: 120px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
 }
 
 .header {
@@ -95,14 +101,16 @@ h6 {
     text-decoration-color: #000;
 }
 
-.main0 {
-    grid-area: main1;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    justify-content: left;
-    margin-right: 30px;
-    align-items: center;
-}
+
+/* .header .menuIdioma1 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    font-family: 'Ubuntu', 'Ubuntu-Light';
+    display: inline-block;
+    margin-right: 15px;
+    text-align: end;
+    padding: 0.5%;
+} */
 
 .main1 {
     grid-area: main1;
@@ -127,8 +135,7 @@ h6 {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: center;
 }
 
 .pieDePag1 .pagos1 {
@@ -140,8 +147,31 @@ h6 {
     font-size: 17px;
     font-family: 'Ubuntu', 'Ubuntu-Regular';
     font-style: italic;
-    margin-left: 0.5rem;
+    margin-right: 450px;
+    /*	esto lo ubica mejor centrado
+	pero no alinea verticalmente
+
+	margin-top: 30px;
+	padding-right: 90%;
+*/
 }
+
+.pieDePag1 .contacto1 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+/*
+.pieDePagina1 .pieDePagina1--pagos1{
+	justify-items: start;
+	justify-content: left;
+	display: inline-block;
+	flex-direction: row;
+	align-items:start;
+	padding: 10px;	
+}
+*/
 
 .pieDePag1 .redes1 {
     grid-column: 2;
@@ -153,7 +183,7 @@ h6 {
     font-weight: 300;
     margin-bottom: 10px;
     text-align: center;
-    /* margin-right: 570px */
+    margin-right: 550px
 }
 
 .encabezado {
@@ -211,6 +241,10 @@ h6 {
 select {
     margin-left: 5px;
     margin-bottom: 0%;
+}
+
+li a:hover {
+    background-color: #AAAEB7;
 }
 
 .pieDePagina {
@@ -296,8 +330,6 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
     background-color: #141516;
 }
 
-
-/* 
 .dark-mode {
     background-color: black;
     color: white;
@@ -305,7 +337,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 
 .dark-mode header {
     background-color: black;
-} */
+}
 
 legend {
     text-align: center;
@@ -327,7 +359,6 @@ legend {
     max-width: max-content;
     margin: auto;
     border-radius: 10px;
-    margin-bottom: 3px;
     /*background-image: url("imagenes/representantes-atencion-al-cliente.jpg"); 
 	background-size: 200px;
 	background-repeat: no-repeat;*/
@@ -363,24 +394,8 @@ a:hover {
     /*background:#D5D5D5;*/
     /*background: #FFF;*/
     border-radius: 15px;
-    border: none;
     padding: 20px;
     display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 70px;
-    flex-direction: row;
-}
-
-.card1 {
-    background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
-    /*background: #A4B0BC;*/
-    /*background: #78828C;*/
-    /*background:#D5D5D5;*/
-    /*background: #FFF;*/
-    border-radius: 15px;
-    border: none;
-    padding: 20px;
     align-items: center;
     position: relative;
     margin-bottom: 70px;
@@ -411,10 +426,10 @@ a:hover {
 
 .card__titulo {
     font-family: 'Ubuntu', 'Ubuntu-Light';
+    /*font-family: 'Raleway', sans-serif;*/
     font-size: 30px;
     font-weight: normal;
     margin-bottom: 20px;
-    color: #000;
 }
 
 .card__enlace {
@@ -572,26 +587,14 @@ h5 {
     text-decoration: underline;
 }
 
-h6 {
-    margin-bottom: 5px;
-}
-
 p {
     font-size: 1rem;
-    font-family: 'Ubuntu', 'Ubuntu-Light';
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-i {
-    margin-top: 5px;
-    margin-bottom: 10px;
+    font-family: 'Ubuntu', 'Ubuntu-Light'
 }
 
 .contenedorServicios {
-    margin-top: 20px;
-    /* margin: 2em auto; */
-    /* margin-left: 300px; */
+    margin: 2em auto;
+    margin-left: 300px;
 }
 
 .card {
@@ -603,10 +606,12 @@ i {
     font-size: 1.2rem;
 }
 
+.nav-item {
+    border-radius: 12px;
+}
+
 li a:hover {
-    border-radius: 0.45rem;
-    /* background-color: #AAAEB7; */
-    background-image: linear-gradient(62deg, #c2c7c9 0%, #8e9eab 100%);
+    border-radius: 10px;
 }
 
 .dropdown-item {
@@ -675,7 +680,7 @@ li a:hover {
     top: 0;
 } */
 
-
+*/
 /* @media only screen and (max-width:600px) and (min-width:400px) {
     body {
         background-color: #bcb5e7;
@@ -702,38 +707,12 @@ li a:hover {
     .menuLista1 {
         padding: 1px;
     }
-    .contenedorGrid {
-        display: grid;
-        grid-template-columns: 1fr 4fr 1fr;
-        grid-template-areas: "header header header" "main1 main1 ads" "pieDePagina1 pieDePagina1 pieDePagina1";
-        /*grid-gap:10px*/
-    }
-    /* .pieDePag1 {
-        grid-area: pieDePagina1;
-        min-height: 120px;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
-    } */
-    .main1 {
-        justify-content: center;
-    }
-    .boxFormulario {
-        margin-bottom: 10px;
-        justify-content: center;
-    }
     .pieDePag1 {
-        grid-area: pieDePagina1;
-        justify-items: start;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        padding: 10px;
-        width: 67%;
+        margin-top: 100px;
     }
     .pieDePag1 .redes1 {
+        grid-column: 2;
+        grid-row: 3;
         justify-items: center;
         justify-content: center;
         align-items: center;
@@ -741,21 +720,17 @@ li a:hover {
         font-weight: 300;
         margin-bottom: 10px;
         text-align: center;
-        margin-right: 0px;
-        margin-top: 10px;
-        margin-bottom: 150px;
+        margin-right: 250px
     }
     .pieDePag1 .pagos1 {
+        grid-column: 1;
+        grid-row: 3;
         justify-items: center;
         align-items: center;
         justify-content: center;
         font-size: 17px;
         font-family: 'Ubuntu', 'Ubuntu-Regular';
         font-style: italic;
-        margin-top: 50px;
-        /* margin-right: 150px; */
-    }
-    .botonDarkMode {
-        margin-right: 10px;
+        margin-right: 150px;
     }
 }

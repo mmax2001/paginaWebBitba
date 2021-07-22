@@ -2,8 +2,9 @@
 <html lang="es">
 
 <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
@@ -15,68 +16,93 @@
 </head>
 
 <body>
+    <div class="contenedorGrid">
+        <!-- encabezado de mi sitio -->
 
-    <!-- encabezado de mi sitio -->
-    <header>
+        <!--header nav-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/dibujo7.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
 
-        <div class="encabezado">
-            <div class="menuModo">
-                <i class="fa fa-adjust"></i>
-                <button onclick="myFunction()" class="boton__textoModo">Modo</button>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="soporte.html">Soporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
 
-            </div>
-            <nav>
-                <ul class="menuLista">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tienda.html">Tienda</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <li><a href="soporte.html">Soporte</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
-            </nav>
-            <div class="menuIdioma">
-                <p>Selecciona tu idioma</p>
-                <select name="idioma" style="margin-left: 7px;" class="boton__textoModo">
-					<option value="Spanish"> Spanish </option>
-					<option value="English"> English </option>
-				</select>
+
             </div>
-        </div>
+            <div class="botonDarkMode">
+                <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                            <span></span>
+                            <span></span>
+                            </button>
+            </div>
 
-    </header>
-    <!-- fin de mi encabezado -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Idioma
+                            </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">English</a>
 
-    <!-- contenido principal -->
-    <main>
-
-        <h1 class="animate__animated animate__fadeInLeft">
-            Bitba
-        </h1>
-
-        <h2 class="animate__animated animate__bounceIn">
-            Tienda online de produtos para cryptomineria
-        </h2>
-
-        <div class="contenedor">
-            <div class="contenedor__cards">
-                <div class="card">
-                    <img src="imagenes/principalBitba.jpg" class="card__img--large">
-                    <div class="card__textos">
-                        <h3 class="frase__texto--titulo">Bienvenidos a nuestro tienda online Bitba</h3>
-                        <p class="frase__texto--inicio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, necessitatibus et. Debitis, maxime dolore. Rerum numquam enim, facere nihil consectetur, quibusdam ducimus dignissimos officia reiciendis, qui ut eos adipisci
-                            sequi! Corporis eaque provident voluptatibus sint error! Placeat similique ratione laboriosam ducimus, eligendi autem sapiente porro explicabo esse temporibus. Ut doloribus deserunt omnis cupiditate! Cum odio aspernatur amet
-                            porro hic pariatur!</p>
-                    </div>
                 </div>
-
             </div>
+        </nav>
+        <!--header nav-->
+
+        <!-- fin de mi encabezado -->
+
+        <!-- contenido principal -->
+        <div class="main0">
+
+            <h1 class="animate__animated animate__fadeInLeft">
+                Bitba
+            </h1>
+
+            <h2 class="animate__animated animate__bounceIn">
+                Tienda online de produtos para cryptomineria
+            </h2>
+
+            <div class="contenedor">
+                <div class="contenedor__cards">
+                    <div class="card">
+                        <img src="imagenes/principalBitba.jpg" class="card__img--large">
+                        <div class="card__textos">
+                            <h3 class="frase__texto--titulo">Bienvenidos a nuestro tienda online Bitba</h3>
+                            <p class="frase__texto--inicio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, necessitatibus et. Debitis, maxime dolore. Rerum numquam enim, facere nihil consectetur, quibusdam ducimus dignissimos officia reiciendis, qui ut eos adipisci
+                                sequi! Corporis eaque provident voluptatibus sint error! Placeat similique ratione laboriosam ducimus, eligendi autem sapiente porro explicabo esse temporibus. Ut doloribus deserunt omnis cupiditate! Cum odio aspernatur
+                                amet porro hic pariatur!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
+        <!-- cierre contenido principal -->
 
-    </main>
-    <!-- cierre contenido principal -->
+        <!-- apertura de pie de pagina -->
 
-    <!-- apertura de pie de pagina -->
-    <footer class="pieDePagina">
+        <!-- <footer class="pieDePagina">
         <ul>
             <div class="pieDePagina--redes">
                 <p style="margin-bottom: 10px;">Seguinos en nuestras redes sociales</p>
@@ -94,14 +120,50 @@
                 <i class="fa fa-cc-discover" style="font-size:24px"></i>
             </div>
         </ul>
-    </footer>
+        </footer> -->
+
+        <div class="pieDePag1">
+            <div class="pagos1">
+                <p class="leyendaPagosAceptados">Aceptamos</p>
+                <i class="fa fa-bitcoin" style="font-size:24px"></i>
+                <i class="fa fa-cc-visa" style="font-size:24px"></i>
+                <i class="fa fa-cc-discover" style="font-size:24px"></i>
+            </div>
+
+            <div class="redes1">
+                <p>Seguinos en nuestras redes sociales</p>
+                <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                <i class="fa fa-telegram" style="font-size:24px"></i>
+                <i class="fa fa-instagram" style="font-size:24px"></i>
+                <i class="fa fa-facebook-official" style="font-size:24px"></i>
+                <h6><strong>Horario de atención:</strong> de 9:00 a 17:30hs</h6>
+                <h6><strong>Telefono:</strong> 0800-0555-1234</h6>
+                <p>Todos los derechos reservados</p>
+            </div>
+        </div>
+
+    </div>
     <!-- cierre de pie de pagina -->
 
     <!-- script dark-mode -->
+
     <script>
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }
+        }
+    </script>
+
+    <script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
         }
     </script>
 
@@ -110,6 +172,11 @@
     <script>
         new WOW().init();
     </script>
+
+    <!--JS Boostrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
 </body>
 
