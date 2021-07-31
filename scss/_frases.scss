@@ -1,0 +1,39 @@
+@mixin fraseBase($fontUse, $textAlign, $marginBottom, $marginTop, $marginLeft, $marginRight, $style) {
+    font-family: $fontUse;
+    text-align: $textAlign;
+    margin-bottom: $marginBottom;
+    margin-top: $marginTop;
+    margin-left: $marginLeft;
+    margin-right: $marginRight;
+    font-style: $style;
+}
+
+.frase {
+    @include fraseBase($font-use-light, center, 70px, 70px, 0px, 0px, normal);
+}
+
+.frase__texto {
+    @include fraseBase($font-use-light, center, 20px, 0, 0, 0, italic);
+    font-size: 30px;
+    font-weight: $font-weight-base*6;
+}
+
+.frase__texto--titulo {
+    @include fraseBase($font-use-light, center, 10px, 0, 10px, 0, italic);
+    font-size: 25px;
+    font-weight: $font-weight-base*5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.frase__texto--soporte {
+    @include fraseBase($font-use-light, center, 10px, 0, 10px, 0, normal);
+    font-size: 15px;
+    font-weight: $font-weight-base*2;
+}
+
+.frase__texto--inicio {
+    @include fraseBase($font-use-light, center, 15px, 0, 15px, 0, normal);
+    font-size: 15px;
+    font-weight: $font-weight-base*2;
+}

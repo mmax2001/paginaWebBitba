@@ -1,0 +1,18 @@
+/*Estilos del header*/
+
+.navbar {
+    grid-area: header;
+    // background-image: linear-gradient(62deg, #8e9eab 15%, #eef2f3 100%);
+}
+
+.navbar-nav {
+    font-family: $font-use-light;
+    font-size: 1.2rem;
+}
+
+li a {
+    &:hover {
+        border-radius: 0.45rem;
+        background-image: linear-gradient(62deg, #c2c7c9 0%, #8e9eab 100%);
+    }
+}

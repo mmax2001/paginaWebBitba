@@ -1,0 +1,135 @@
+/*Estilos de la card*/
+
+.contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenedor__cards {
+    margin: 70px 0;
+}
+
+.card {
+    background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
+    border-radius: 9px;
+    border: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+    flex-direction: row;
+}
+
+.card1 {
+    background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
+    border-radius: 15px;
+    border: none;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.card__img--medium {
+    width: 50%;
+    border-radius: 15px;
+}
+
+.card__img--large {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card__img {
+    width: 25%;
+}
+
+.card__thumbnail {
+    width: 450px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.card__titulo {
+    font-family: $font-use-regular;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.card__enlace {
+    color: #000;
+}
+
+.card__extracto {
+    font-family: $font-use-light;
+    line-height: 28px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.card1 {
+    background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
+    border-radius: 15px;
+    border: none;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+// Estilos boton
+.boton {
+    border: none;
+    min-width: 140px;
+    height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #403CC2;
+    transition: .3s ease all;
+}
+
+.boton__texto {
+    font-family: $font-use-light;
+    font-size: large;
+    font-weight: $font-weight-base*4;
+    text-align: center;
+    height: min-content;
+    &:hover {
+        background: #1B1881;
+        text-decoration: none;
+    }
+}
+
+.boton--absolute {
+    position: absolute;
+    right: 20px;
+    bottom: -25px;
+}
+
+.boton--absoluteLeft {
+    position: absolute;
+    left: 590px;
+    bottom: -25px;
+}
+
+.boton--submit {
+    height: auto;
+    width: auto;
+    color: #fff;
+    background: #403CC2;
+    border-radius: 5px;
+    border: 0px;
+}

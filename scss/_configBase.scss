@@ -1,0 +1,63 @@
+/*Estilos basicos*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: $font-use-regular;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: $font-weight-base*7;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: $font-use-regular;
+    color: #4E4C59;
+    margin: 5px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-family: $font-use-light;
+    color: lightgray;
+    text-shadow: 2px 2px 5px black;
+    text-decoration: underline;
+}
+
+h6 {
+    font-size: 1rem;
+    font-family: $font-use-light;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1rem;
+    font-family: $font-use-light;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+i {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#Italica {
+    font-style: italic;
+}
