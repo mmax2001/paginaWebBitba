@@ -1,7 +1,7 @@
 {
   "name": "proyectopagina",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bitba tienda online de criptomineria",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mmax2001/paginaWebBitba.git"
   },
-  "author": "",
+  "author": "Maximiliano Magri",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mmax2001/paginaWebBitba/issues"

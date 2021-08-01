@@ -18,10 +18,11 @@
 
 <body>
 
-    <div class="contenedorGrid">
-        <!-- inicio encabezado -->
 
-        <!--header nav-->
+    <!-- inicio encabezado -->
+
+    <!--header nav-->
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="index.html">
                 <img src="imagenes/dibujo7.png" alt="">
@@ -69,73 +70,164 @@
                 </div>
             </div>
         </nav>
-        <!-- fin encabezado -->
+    </header>
+    <!-- fin encabezado -->
 
-        <!-- contenido principal -->
-        <div class="main1">
-            <h1 class="animate__animated animate__flipInY">Contactanos</h1>
-            <form action="envio.php" method="POST" enctype="multipart/form-data">
-                <div>
-                    <fieldset class="boxFormulario">
-                        <legend class="card_titulo">Complete el formulario</legend>
-                        <label for="nombreyapellido"> Nombre y Apellido </label>
-                        <div style="margin-bottom: 20px;">
-                            <input type="text" name="nombreyapellido" placeholder="Escriba aqui su Nombre y Apellido " id="" maxlength="150" size="45%" class="inputContacto">
-                        </div>
-                        <label for="correoelectronico"> Correo Electronico </label>
-                        <div style="margin-bottom: 20px;">
-                            <input type="email" name="correoelectronico" placeholder="Escriba aqui su email" id="" maxlength="100" size="45%" class="inputContacto">
-                        </div>
-                        <label for="fraseTexto"> Envianos tu consulta </label>
-                        <div class="frase__texto">
-                            <textarea style="height: 80px;width: 100%;margin-bottom: 20px;" class="inputContacto">Escriba aqui su consulta</textarea>
-                        </div>
-                        <label> Si ademas le gustaria recibir novedades</label>
-                        <br>
-                        <label> en su casilla de correo marque la casilla </label>
-                        <div style="margin-bottom: 20px;">
-                            <input type="checkbox" name="recibenovedades" value="1">
-                        </div>
-                        <div class="boton">
-                            <input type="submit" name="enviar" value="Enviar" class="boton__texto boton--submit" style="width: 100px;">
-                        </div>
-                        <div class="boton">
-                            <input type="reset" name="limpiar" value="Limpiar Contenido" class="boton__texto boton--submit">
-                        </div>
-                    </fieldset>
-                </div>
-            </form>
-        </div>
+    <!-- contenido principal -->
+    <section class="main1">
+        <h1 class="animate__animated animate__flipInY">Contactanos</h1>
+        <form action="envio.php" method="POST" enctype="multipart/form-data">
+            <div>
+                <fieldset class="boxFormulario">
+                    <legend class="card_titulo">Complete el formulario</legend>
+                    <label for="nombreyapellido"> Nombre y Apellido </label>
+                    <div style="margin-bottom: 20px;">
+                        <input type="text" name="nombreyapellido" placeholder="Escriba aqui su Nombre y Apellido " id="" maxlength="150" size="45%" class="inputContacto">
+                    </div>
+                    <label for="correoelectronico"> Correo Electronico </label>
+                    <div style="margin-bottom: 20px;">
+                        <input type="email" name="correoelectronico" placeholder="Escriba aqui su email" id="" maxlength="100" size="45%" class="inputContacto">
+                    </div>
+                    <label for="fraseTexto"> Envianos tu consulta </label>
+                    <div class="frase__texto">
+                        <textarea style="height: 80px;width: 100%;margin-bottom: 20px;" class="inputContacto">Escriba aqui su consulta</textarea>
+                    </div>
+                    <label> Si ademas le gustaria recibir novedades</label>
+                    <br>
+                    <label> en su casilla de correo marque la casilla </label>
+                    <div style="margin-bottom: 20px;">
+                        <input type="checkbox" name="recibenovedades" value="1">
+                    </div>
+                    <div class="boton">
+                        <input type="submit" name="enviar" value="Enviar" class="boton__texto boton--submit" style="width: 100px;">
+                    </div>
+                    <div class="boton">
+                        <input type="reset" name="limpiar" value="Limpiar Contenido" class="boton__texto boton--submit">
+                    </div>
+                </fieldset>
+            </div>
+        </form>
         <div class="ads">
 
         </div>
-        <!-- cierre contenido principal -->
+    </section>
 
-        <!-- apertura de pie de pagina -->
+    <!-- cierre contenido principal -->
 
-        <div class="pieDePag1">
-            <div class="pagos1">
-                <p class="leyendaPagosAceptados">Aceptamos</p>
-                <i class="fa fa-bitcoin" style="font-size:24px"></i>
-                <i class="fa fa-cc-visa" style="font-size:24px"></i>
-                <i class="fa fa-cc-discover" style="font-size:24px"></i>
+    <!-- remover container para tener el footer con full width. -->
+    <footer class="container my-5">
+        <!-- Footer -->
+        <section class="text-center text-lg-start text-white" style="background-color: #45526e">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <img src="imagenes/dibujo11.png" alt="Marca Bitba">
+                            <p>© 2021 Todos los derechos reservados: Bitba</p>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none" />
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Aceptamos</h6>
+                            <i class="fa fa-bitcoin" style="font-size:24px"></i>
+                            <i class="fa fa-cc-visa" style="font-size:24px"></i>
+                            <i class="fa fa-cc-discover" style="font-size:24px"></i>
+                        </div>
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Enlaces del sitio
+                            </h6>
+                            <p>
+                                <a class="text-white" href="index.html">Inicio</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="tienda.html">Tienda</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="catalogo.html">Catalogo</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="soporte.html">Soporte</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="contacto.html">Contacto</a>
+                            </p>
+                        </div>
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+                            <p><i class="fa fa-home mr-3"></i>Buenos Aires, BA 1824, AR</p>
+                            <p><i class="fa fa-envelope mr-3"></i>info@gmail.com</p>
+                            <p><i class="fa fa-phone mr-3"></i>+ 54 01 0800-0555-1234</p>
+                            <p><i class="fa fa-print mr-3"></i>+ 54 01 4765-3421</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <hr class="my-3">
+
+                <!-- Section: Copyright -->
+                <section class="p-3 pt-0">
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-7 col-lg-8 text-center text-md-start">
+                            <!-- Copyright -->
+                            <div class="p-3">
+                                <p>Seguinos o contactanos tambien en nuestras redes sociales</p>
+                            </div>
+                            <!-- Copyright -->
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                                <i class="fa fa-telegram" style="font-size: 24px;"></i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                                <i class="fa fa-whatsapp" style="font-size: 24px;"></i>
+                            </a>
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                                <i class="fa fa-facebook-official" style="font-size: 24px;"></i>
+                            </a>
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                                <i class="fa fa-instagram" style="font-size: 24px;"></i>
+                            </a>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                </section>
+                <!-- Section: Copyright -->
             </div>
+            <!-- Grid container -->
+        </section>
+        <!-- Footer -->
+    </footer>
+    <!-- fin de .container -->
 
-            <div class="redes1">
-                <p>Seguinos en nuestras redes sociales</p>
-                <i class="fa fa-whatsapp" style="font-size:24px"></i>
-                <i class="fa fa-telegram" style="font-size:24px"></i>
-                <i class="fa fa-instagram" style="font-size:24px"></i>
-                <i class="fa fa-facebook-official" style="font-size:24px"></i>
-                <h6><strong>Horario de atención:</strong> de 9:00 a 17:30hs</h6>
-                <h6><strong>Telefono:</strong> 0800-0555-1234</h6>
-                <p>Todos los derechos reservados</p>
-            </div>
-        </div>
+    <!-- cierre de pie de pagina -->
 
-        <!-- cierre de pie de pagina -->
 
-    </div>
+    <!-- cierre de pie de pagina -->
+
+
 
     <!-- script dark-mode -->
 
