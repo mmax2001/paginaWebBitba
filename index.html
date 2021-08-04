@@ -66,14 +66,14 @@
                 </ul>
 
             </div>
-            <div class="botonDarkMode">
+            <div class="botonDarkMode botonDesktop">
                 <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
                                 <span></span>
                                 <span></span>
                                 </button>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown botonDesktop">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Idioma
                                 </button>
@@ -91,7 +91,25 @@
 
     <!-- contenido principal -->
     <section class="main0">
+        <section class="botonMobile">
+            <div class="botonDarkMode">
+                <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                            <span></span>
+                            <span></span>
+                            </button>
+            </div>
 
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Idioma
+                            </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">English</a>
+
+                </div>
+            </div>
+        </section>
         <h1 class="animate__animated animate__fadeInLeft">
             Bitba Tienda Online
         </h1>
