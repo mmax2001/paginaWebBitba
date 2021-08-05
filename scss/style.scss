@@ -160,7 +160,9 @@ select {
     animation-delay: 10ms;
 }
 
-// @media only screen and (max-width:834px) and (min-width:376px) {
+
+/*Media para tabletas grandes (10 pulgadas)*/
+
 @media all and (min-width: 768px) and (max-width: 959px) {
     body {
         background-color: $bg-colorTablet;
@@ -251,7 +253,9 @@ select {
     }
 }
 
-// @media only screen and (max-width: 576px) {
+
+/*Media para tablets pequeñas*/
+
 @media all and (min-width: 480px) and (max-width: 767px) {
     body {
         background-color: $bg-colorTablet;
@@ -337,12 +341,11 @@ select {
     .dropdown {
         margin: 10px 10px;
     }
-    // .botonDarkMode {
-    //     margin-right: 10px;
-    // }
 }
 
-//Media para telefonos con pantalla vertical
+
+/*Media para telefonos con pantalla vertical*/
+
 @media all and (max-width: 479px) {
     body {
         background-color: $bg-colorTablet;
@@ -428,7 +431,4 @@ select {
     .dropdown {
         margin: 10px 10px;
     }
-    // .botonDarkMode {
-    //     margin-right: 10px;
-    // }
 }

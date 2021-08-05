@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Estilos basicos*/
 * {
   margin: 0;
@@ -43,6 +44,7 @@ p {
   font-family: "Ubuntu", "Ubuntu-Light";
   margin-bottom: 5px;
   margin-top: 5px;
+  color: black;
 }
 
 i {
@@ -521,6 +523,7 @@ select {
   animation-delay: 10ms;
 }
 
+/*Media para tabletas grandes (10 pulgadas)*/
 @media all and (min-width: 768px) and (max-width: 959px) {
   body {
     background-color: #c0adad;
@@ -619,6 +622,7 @@ select {
     margin-right: 10px;
   }
 }
+/*Media para tablets pequeñas*/
 @media all and (min-width: 480px) and (max-width: 767px) {
   body {
     background-color: #c0adad;
@@ -713,6 +717,7 @@ select {
     margin: 10px 10px;
   }
 }
+/*Media para telefonos con pantalla vertical*/
 @media all and (max-width: 479px) {
   body {
     background-color: #c0adad;
