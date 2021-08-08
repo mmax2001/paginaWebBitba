@@ -19,11 +19,9 @@
 }
 
 .frase__texto--titulo {
-    @include fraseBase($font-use-light, center, 10px, 0, 10px, 0, italic);
+    @include fraseBase($font-use-light, center, 10px, 10px, 10px, 0, italic);
     font-size: 25px;
     font-weight: $font-weight-base*5;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .frase__texto--soporte {
