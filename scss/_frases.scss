@@ -9,7 +9,7 @@
 }
 
 .frase {
-    @include fraseBase($font-use-light, center, 70px, 70px, 0px, 0px, normal);
+    @include fraseBase($font-use-light, center, 0px, 0px, auto, auto, normal);
 }
 
 .frase__texto {

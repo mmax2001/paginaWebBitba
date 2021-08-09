@@ -74,14 +74,14 @@ body {
     height: 40vh;
 }
 
-.botonVolverArriba {
-    text-align: center;
+.btnVolverArriba {
+    display: flex;
+    justify-content: center;
     background-color: white;
     padding: 10px 18px;
-    width: 12%;
-    margin: 20px;
+    width: 10%;
     border-radius: 5px;
-    margin-left: 210px;
+    margin: 0 auto;
 }
 
 .inputContacto {
@@ -249,6 +249,9 @@ select {
             margin-top: 50px;
         }
     }
+    .btnVolverArriba {
+        width: 18%;
+    }
     .botonDarkMode {
         margin-right: 10px;
     }
@@ -328,6 +331,9 @@ select {
             font-style: italic;
             margin-top: 50px;
         }
+    }
+    .btnVolverArriba {
+        width: 28%;
     }
     .botonDesktop {
         display: none;
@@ -418,6 +424,9 @@ select {
             font-style: italic;
             margin-top: 50px;
         }
+    }
+    .btnVolverArriba {
+        width: 35%;
     }
     .botonDesktop {
         display: none;
