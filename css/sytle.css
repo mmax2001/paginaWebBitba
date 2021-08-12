@@ -56,10 +56,6 @@ i {
   margin-bottom: 10px;
 }
 
-s {
-  color: black;
-}
-
 a {
   text-decoration: none;
 }
@@ -143,17 +139,7 @@ li a:hover {
   margin: 70px 0;
 }
 
-.card1 {
-  background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
-  border-radius: 10px;
-  border: none;
-  padding: 20px;
-  align-items: center;
-  position: relative;
-  margin-bottom: 70px;
-}
-
-.card2 {
+.card {
   background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
   border-radius: 9px;
   border: none;
@@ -165,7 +151,7 @@ li a:hover {
   flex-direction: row;
 }
 
-.cardHome {
+.card1 {
   background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
   border-radius: 10px;
   border: none;
@@ -223,12 +209,13 @@ li a:hover {
   height: 50px;
   padding: 0 20px;
   color: #fff;
+  display: inline-block;
   border-radius: 10px;
   text-decoration: none;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  background: #808080;
+  background: #403CC2;
   transition: 0.3s ease all;
 }
 
@@ -240,7 +227,7 @@ li a:hover {
   height: min-content;
 }
 .boton__texto:hover {
-  background: #464545;
+  background: #1B1881;
   text-decoration: none;
 }
 
@@ -260,10 +247,9 @@ li a:hover {
   height: auto;
   width: auto;
   color: #fff;
-  background: #808080;
+  background: #403CC2;
   border-radius: 5px;
   border: 0px;
-  padding: 0.5rem;
 }
 
 .frase {
@@ -603,10 +589,6 @@ select {
     margin-left: 460px;
   }
 
-  .card-body {
-    padding: 0.25rem;
-  }
-
   .pieDePag1 {
     grid-area: pieDePagina1;
     justify-items: start;
@@ -846,4 +828,4 @@ select {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=sytle.css.map */

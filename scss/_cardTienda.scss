@@ -10,7 +10,17 @@
     margin: 70px 0;
 }
 
-.card {
+.card1 {
+    background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.card2 {
     background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
     border-radius: 9px;
     border: none;
@@ -22,7 +32,7 @@
     flex-direction: row;
 }
 
-.card1 {
+.cardHome {
     background-image: linear-gradient(62deg, #eef2f3 0%, #8e9eab 100%);
     border-radius: 10px;
     border: none;
@@ -81,13 +91,12 @@
     height: 50px;
     padding: 0 20px;
     color: #fff;
-    display: inline-block;
     border-radius: 10px;
     text-decoration: none;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    background: #403CC2;
+    background: #808080;
     transition: .3s ease all;
 }
 
@@ -98,7 +107,7 @@
     text-align: center;
     height: min-content;
     &:hover {
-        background: #1B1881;
+        background: #464545;
         text-decoration: none;
     }
 }
@@ -119,7 +128,8 @@
     height: auto;
     width: auto;
     color: #fff;
-    background: #403CC2;
+    background: #808080;
     border-radius: 5px;
     border: 0px;
+    padding: .5rem;
 }

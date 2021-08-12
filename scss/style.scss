@@ -218,6 +218,9 @@ select {
         width: fit-content;
         margin-left: 460px;
     }
+    .card-body {
+        padding: 0.25rem;
+    }
     .pieDePag1 {
         grid-area: pieDePagina1;
         justify-items: start;

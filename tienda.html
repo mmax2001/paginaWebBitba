@@ -19,7 +19,8 @@
     <!--header nav-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">
-            <img src="imagenes/dibujo7.png" alt="">
+            <img src="imagenes/dibujo7.png" class="botonDesktop" alt="logo Bitba">
+            <img src="imagenes/dibujo11.png" class="botonMobile" alt="logo y marca Bitba">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -96,74 +97,173 @@
         </section>
         <h1 class="animate__animated animate__flipInY">Tienda de compras Bitba</h1>
 
-        <!-- Bloques,Elementos y Modificadores -->
-        <div class="contenedor">
-            <div class="contenedor__cards">
-                <!-- Elemento -->
-                <div class="card">
-                    <!-- Bloque -->
-                    <img src="imagenes/cablecpupcie.jpg" alt="" class="card__thumbnail">
-                    <!-- Elemento -->
-                    <div class="card__extracto">
-                        <h3 class="card__titulo">Cable CPU a PCIE</h3>
-                        <p class="card__extracto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, rerum veritatis? Maiores cum nihil libero deserunt facere inventore, asperiores ipsum commodi nulla facilis pariatur tempore eveniet explicabo labore quaerat atque!</p>
-                        <form action="envioCompraCantidad.php" method="POST" enctype="multipart/form-data">
+        <!-- Cards tienda -->
 
-                            <div class="boton boton--absoluteLeft">
-                                <!-- Bloque -->
-                                <label class="boton__texto" for="cantidad">Cantidad :</label>
-                                <input class="boton__texto" type="number" id="" name="cantidad" min="0" max="100" step="1" value="0" size="3">
-                                <!-- Elemento -->
-                            </div>
+        <section class="container contenedorServicios">
 
-                            <div class="boton boton--absolute">
-                                <!-- Bloque -->
-                                <input class="boton__texto boton--submit" type="submit" name="comprar" value="Comprar" style="width:100px;">
-                                <!-- Elemento -->
-                            </div>
-                        </form>
+            <article class="row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/cablecpu.jpg" class="card-img-top" alt="cable cpu pcie">
+                        <div class="card-body">
+                            <h5 class="card-title">Cable adaptador cpu a PCIE</h5>
+                            <p class="card-text">Adaptador para ficha macho CPU de 8 pines a ficha pcie 6+2 pines hembra</p>
+                            <section class="card-body">
+                                <!-- Divider -->
+                                <hr>
+                                <!-- Price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$450.00</span>
+                                    <span class="text-grey"><s>$600.99</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="imagenes/VER009SPCIRiser.jpg" alt="" class="card__thumbnail">
-                    <div class="card__textos">
-                        <h3 class="card__titulo">Riser PCIE</h3>
-                        <p class="card__extracto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, rerum veritatis? Maiores cum nihil libero deserunt facere inventore, asperiores ipsum commodi nulla facilis pariatur tempore eveniet explicabo labore quaerat atque!</p>
-                        <form action="envioCompraCantidad.php" method="POST" enctype="multipart/form-data">
-
-                            <div class="boton boton--absoluteLeft">
-                                <label class="boton__texto" for="cantidad">Cantidad :</label>
-                                <input class="boton__texto" type="number" id="" name="cantidad" min="0" max="100" step="1" value="0" size="3">
-                            </div>
-
-                            <div class="boton boton--absolute">
-                                <input class="boton__texto boton--submit" type="submit" name="comprar" value="Comprar" style="width: 100px;">
-                            </div>
-                        </form>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/VER009SPCIRiser.jpg" class="card-img-top" alt="riser PCI Express">
+                        <div class="card-body">
+                            <h5 class="card-title">Riser adaptador PCIE 1x a 16x</h5>
+                            <p class="card-text">Riser version 009S incluye cable de alimentacion sata y de datos usb 3.0</p>
+                            <section class="card-body">
+                                <!-- Divider -->
+                                <hr>
+                                <!-- Price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$1200.99</span>
+                                    <span class="text-grey"><s>$1600.99</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="imagenes/RiserMulti.jpg" alt="" class="card__thumbnail">
-                    <div class="card__textos">
-                        <h3 class="card__titulo">Riser PCIE Multiple</h3>
-                        <p class="card__extracto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, rerum veritatis? Maiores cum nihil libero deserunt facere inventore, asperiores ipsum commodi nulla facilis pariatur tempore eveniet explicabo labore quaerat atque!</p>
-                        <form action="envioCompraCantidad.php" method="POST" enctype="multipart/form-data">
-
-                            <div class="boton boton--absoluteLeft">
-                                <label class="boton__texto" for="cantidad">Cantidad :</label>
-                                <input class="boton__texto" type="number" id="" name="cantidad" min="0" max="100" step="1" value="0" size="3">
-                            </div>
-
-                            <div class="boton boton--absolute">
-                                <input class="boton__texto boton--submit" type="submit" name="comprar" value="Comprar" style="width: 100px;">
-                            </div>
-                        </form>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/RiserMulti.jpg" class="card-img-top" alt="riser pci express multiple">
+                        <div class="card-body">
+                            <h5 class="card-title">Riser adapator PCIE multiple</h5>
+                            <p class="card-text">Adaptador a cuatro ranuras pcie 16x con alimentacion molex 4 pines</p>
+                            <section class="card-body">
+                                <!-- Divider -->
+                                <hr>
+                                <!-- Price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$6200.99</span>
+                                    <span class="text-grey"><s>$8600.99</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                                <!-- buttons -->
+                            </section>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/breakOut2.jpg" class="card-img-top" alt="breakout board para fuente server">
+                        <div class="card-body">
+                            <h5 class="card-title">Breakout board 12 salidas</h5>
+                            <p class="card-text">Boton de encendido,display de voltaje y conector de encendido sincronizado</p>
+                            <section class="card-body">
+                                <!-- Divider -->
+                                <hr>
+                                <!-- Price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$2200.99</span>
+                                    <span class="text-grey"><s>$2600.99</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/fuente1200Wd.jpg" class="card-img-top" alt="fuente 1400w servidor 80 plus platinum">
+                        <div class="card-body">
+                            <h5 class="card-title">Fuente de servidor 1400 Watts</h5>
+                            <p class="card-text">Fuente servidor clase 80 plus platinum no incluye cables ni breakout</p>
+                            <section class="card-body">
+                                <!-- divider -->
+                                <hr>
+                                <!-- price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$40200.99</span>
+                                    <span class="text-grey"><s>$42600.99</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/rigEstructura.jpg" class="card-img-top" alt="rig estructura 7 gpus">
+                        <div class="card-body">
+                            <h5 class="card-title">Rig de mineria para 7 gpus</h5>
+                            <p class="card-text">Rig apto para 7 gpus, estructura en aluminio perfil Bosch 20x20</p>
+                            <section class="card-body">
+                                <!-- divider -->
+                                <hr>
+                                <!-- price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$11200.99</span>
+                                    <span class="text-grey"><s>$12600.99</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
 
     </main>
     <!-- cierre contenido principal -->
