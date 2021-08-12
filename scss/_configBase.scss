@@ -51,6 +51,20 @@ p {
     color: black;
 }
 
+@mixin parrafos ($fontSize, $font-use-regular, $fontWeight, $margenArriba, $margenAbajo, $color) {
+    font-size: $fontSize;
+    font-family: $font-use-regular;
+    font-weight: $fontWeight;
+    margin-top: $margenArriba;
+    margin-bottom: $margenAbajo;
+    color: $color;
+}
+
+.parrafoCarrusel {
+    @include parrafos (1.2rem, $font-use-regular, 500, 15px, 5px, white);
+    text-shadow: black 0.2em 0.2em 0.3em;
+}
+
 i {
     margin-top: 5px;
     margin-bottom: 10px;
