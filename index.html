@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+<html prefix="og:https://ogp.me/ns#type">
+<html prefix="og:http://ogp.me/ns#title">
+<html prefix="og:http://ogp.me/ns#title">
+<html prefix="og:http://ogp.me/ns#url">
+<html prefix="og:http://ogp.me/ns#image">
 
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -10,6 +15,9 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
     <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="canonical" href="https://bitba.000webhostapp.com/index.html" /> -->
+    <link rel="canonical" href="https://mmax2001.github.io/paginaWebBitba/index.html" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,6 +32,7 @@
     <link rel="shorcut icon" href="imagenes/favicon.ico" type="image/x-icon">
 
     <!-- Open graph -->
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Bitba tienda online de productos para criptomineria">
     <meta property="og:url" content="https://mmax2001.github.io/paginaWebBitba/tienda.html">
     <meta property="og:image" content="https://mmax2001.github.io/paginaWebBitba/imagenes/principalBitba.jpg">
@@ -39,7 +48,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="index.html">
-                <img src="imagenes/dibujo7.png" alt="logo Bitba">
+                <img src="imagenes/logoBitba.png" alt="logo Bitba">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -92,7 +101,9 @@
     <!-- fin de mi encabezado -->
 
     <!-- contenido principal -->
-    <section class="main0">
+    <main>
+        <!-- <div class="contenedorGrid"> -->
+        <!-- <section class="main0"> -->
         <section class="botonMobile">
             <div class="botonDarkMode">
                 <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
@@ -127,8 +138,9 @@
                     <img src="imagenes/imageninicio.jpg" loading="lazy" class="card__img--large" alt="rig de mineria">
                     <div class="card__textos">
                         <h3 class="frase__texto--titulo">Bienvenidos a nuestra tienda online Bitba</h3>
-                        <p class="frase__texto--inicio">Nuestra tienda online cuenta con una amplia variedad de productos para mineria de criptomonedas, como asi tambien productos criptos, tenemos tambien un excelente servicio tecnico especializado desde los comienzos de bitcoin en
-                            el area de mineria cripto, estamos para brindarte el mejor servicio! no dudes en contactarnos por nuestros diferentes medios,te asesoraremos ante cualquier duda que poseas!
+                        <p class="frase__texto--inicio">Nuestra tienda online cuenta con una amplia variedad de productos y accesorios para mineria de criptomonedas, como asi tambien wallets para criptos, fisicas, electronicas y etc. brindamos tambien un excelente servicio tecnico especializado
+                            desde los comienzos de bitcoin en el area de mineria cripto,entregamos nuestros rigs con configuracion completa llave en mano y ademas podes contar con nuestro monitoreo de rigs. Estamos para brindarte el mejor servicio! no
+                            dudes en contactarnos por nuestros diferentes medios,te asesoraremos ante cualquier duda que poseas!
                         </p>
                     </div>
                 </div>
@@ -136,7 +148,9 @@
             </div>
         </div>
 
-    </section>
+        <!-- </section> -->
+        <!-- </div> -->
+    </main>
     <!-- cierre contenido principal -->
 
     <!-- apertura de pie de pagina -->
@@ -222,19 +236,19 @@
                         <!-- Grid column -->
                         <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
                             <!-- Facebook -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="telegram" role="button">
                                 <i class="fa fa-telegram" style="font-size: 24px;"></i>
                             </a>
                             <!-- Twitter -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="whatsapp" role="button">
                                 <i class="fa fa-whatsapp" style="font-size: 24px;"></i>
                             </a>
                             <!-- Google -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="facebook" role="button">
                                 <i class="fa fa-facebook-official" style="font-size: 24px;"></i>
                             </a>
                             <!-- Instagram -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="instagram" role="button">
                                 <i class="fa fa-instagram" style="font-size: 24px;"></i>
                             </a>
                         </div>

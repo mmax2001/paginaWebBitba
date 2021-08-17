@@ -24,7 +24,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="index.html">
-                <img src="imagenes/dibujo7.png" alt="">
+                <img src="imagenes/logoBitba.png" alt="logo Bitba">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -109,9 +109,13 @@
                     <div style="margin-bottom: 20px;">
                         <input type="email" name="correoelectronico" placeholder="Escriba aqui su email" id="" maxlength="100" size="45%" class="inputContacto">
                     </div>
+                    <label for="asuntomensaje"> Asunto </label>
+                    <div style="margin-bottom: 20px;">
+                        <input type="text" name="asuntomensaje" placeholder="Escriba aqui el asunto" id="" maxlength="100" size="45%" class="inputContacto">
+                    </div>
                     <label for="fraseTexto"> Envianos tu consulta </label>
                     <div class="frase__texto">
-                        <textarea style="height: 80px;width: 100%;margin-bottom: 20px;" class="inputContacto">Escriba aqui su consulta</textarea>
+                        <textarea name="mensaje" style="height: 80px;width: 100%;margin-bottom: 20px;" class="inputContacto">Escriba aqui su consulta</textarea>
                     </div>
                     <label> Si ademas le gustaria recibir novedades</label>
                     <br>
@@ -216,19 +220,19 @@
                         <!-- Grid column -->
                         <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
                             <!-- Facebook -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="telegram" role="button">
                                 <i class="fa fa-telegram" style="font-size: 24px;"></i>
                             </a>
                             <!-- Twitter -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="whatsapp" role="button">
                                 <i class="fa fa-whatsapp" style="font-size: 24px;"></i>
                             </a>
                             <!-- Google -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="facebook" role="button">
                                 <i class="fa fa-facebook-official" style="font-size: 24px;"></i>
                             </a>
                             <!-- Instagram -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="instagram" role="button">
                                 <i class="fa fa-instagram" style="font-size: 24px;"></i>
                             </a>
                         </div>

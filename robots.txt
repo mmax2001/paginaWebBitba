@@ -1,0 +1,3 @@
+User-agent:*
+Disallow:
+Sitemap:https://mmax2001.github.io/paginaWebBitba/sitemap.xml

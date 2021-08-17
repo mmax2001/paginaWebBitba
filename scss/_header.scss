@@ -8,6 +8,9 @@
 .navbar-nav {
     font-family: $font-use-light;
     font-size: 1.2rem;
+    .nav-link {
+        padding-left: 10px;
+    }
 }
 
 li a {

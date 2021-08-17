@@ -23,6 +23,7 @@ h2 {
   margin: 5px;
   margin-bottom: 3px;
   text-align: center;
+  width: auto;
 }
 
 h3 {
@@ -89,6 +90,9 @@ a:hover {
 .navbar-nav {
   font-family: "Ubuntu", "Ubuntu-Light";
   font-size: 1.2rem;
+}
+.navbar-nav .nav-link {
+  padding-left: 10px;
 }
 
 li a:hover {
@@ -193,6 +197,7 @@ li a:hover {
 .card__img--large {
   width: 100%;
   border-radius: 15px;
+  height: auto;
 }
 
 .card__img {
@@ -422,16 +427,7 @@ body {
   grid-area: main1;
   grid-column-start: 2;
   grid-row-start: 2;
-  justify-content: left;
-  align-items: center;
-}
-
-.main1 {
-  grid-area: main1;
-  grid-column-start: 2;
-  grid-row-start: 2;
-  justify-content: left;
-  margin-right: 30px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -464,13 +460,22 @@ body {
 }
 
 .btnVolverArriba {
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  padding: 10px 18px;
-  width: 10%;
+  position: fixed;
+  width: 8%;
+  bottom: 72px;
+  left: 10px;
   border-radius: 5px;
+  text-align: center;
   margin: 0 auto;
+  background-color: white;
+  padding: 5px 10px;
+  z-index: 6;
+  box-shadow: 2px 2px 3px #999;
+}
+.btnVolverArriba:hover {
+  background: #acaaaa;
+  text-decoration: none;
+  transition: 300ms all ease;
 }
 
 .inputContacto {
@@ -617,6 +622,21 @@ select {
     padding: 0.25rem;
   }
 
+  .btnVolverArriba {
+    position: fixed;
+    width: 8%;
+    bottom: 72px;
+    left: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px 10px;
+    z-index: 6;
+    box-shadow: 2px 2px 3px #999;
+    transition: 300ms all ease;
+  }
+
   .pieDePag1 {
     grid-area: pieDePagina1;
     justify-items: start;
@@ -647,10 +667,6 @@ select {
     font-family: "Ubuntu", "Ubuntu-Regular";
     font-style: italic;
     margin-top: 50px;
-  }
-
-  .btnVolverArriba {
-    width: 18%;
   }
 
   .botonDarkMode {
@@ -736,7 +752,18 @@ select {
   }
 
   .btnVolverArriba {
-    width: 28%;
+    position: fixed;
+    width: 18%;
+    bottom: 72px;
+    left: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px 10px;
+    z-index: 6;
+    box-shadow: 2px 2px 3px #999;
+    transition: 300ms all ease;
   }
 
   .botonDesktop {
@@ -802,6 +829,11 @@ select {
     margin-left: 460px;
   }
 
+  .boton {
+    padding: 16px;
+    margin: 5px 5px;
+  }
+
   .pieDePag1 {
     grid-area: pieDePagina1;
     justify-items: start;
@@ -835,7 +867,18 @@ select {
   }
 
   .btnVolverArriba {
-    width: 35%;
+    position: fixed;
+    width: 11%;
+    bottom: 72px;
+    left: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px 10px;
+    z-index: 6;
+    box-shadow: 2px 2px 3px #999;
+    transition: 300ms all ease;
   }
 
   .botonDesktop {
