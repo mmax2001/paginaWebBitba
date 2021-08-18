@@ -26,25 +26,17 @@ body {
 .contenedorGrid {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: "header header header" "main1 main1 ads" "pieDePagina1 pieDePagina1 pieDePagina1";
+    grid-template-areas: "header header header" "mainGrid mainGrid ads" "pieDePagina1 pieDePagina1 pieDePagina1";
 }
 
 .main0 {
-    grid-area: main1;
+    grid-area: mainGrid;
     grid-column-start: 2;
     grid-row-start: 2;
     justify-content: center;
     align-items: center;
 }
 
-// .main1 {
-//     grid-area: main1;
-//     grid-column-start: 2;
-//     grid-row-start: 2;
-//     justify-content: left;
-//     margin-right: 30px;
-//     align-items: center;
-// }
 .botonMobile {
     display: none;
 }

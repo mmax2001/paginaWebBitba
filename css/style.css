@@ -62,10 +62,6 @@ p {
   text-shadow: black 0.2em 0.2em 0.3em;
 }
 
-.parrafoFooter {
-  color: white;
-}
-
 i {
   margin-top: 5px;
   margin-bottom: 10px;
@@ -109,45 +105,8 @@ li a:hover {
   max-width: 960px;
 }
 
-.pieDePag1 {
-  grid-area: pieDePagina1;
-  min-height: 120px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 60%;
-}
-.pieDePag1 .pagos1 {
-  grid-column: 1;
-  grid-row: 3;
-  justify-items: start;
-  align-items: start;
-  justify-content: start;
-  font-size: 17px;
-  font-family: "Ubuntu", "Ubuntu-Regular";
-  font-style: italic;
-  margin-left: 0.5rem;
-}
-.pieDePag1 .redes1 {
-  grid-column: 2;
-  grid-row: 3;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  font-family: "Ubuntu", "Ubuntu-Regular";
-  font-weight: 300;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.leyendaPagosAceptados {
-  font-size: 17px;
-  font-family: "Ubuntu", "Ubuntu-Regular";
-  font-style: italic;
-  margin-top: 10px;
-  margin-left: 5px;
-  margin-bottom: 0px;
+.parrafoFooter {
+  color: white;
 }
 
 /*Estilos de la card*/
@@ -424,11 +383,11 @@ body {
 .contenedorGrid {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-areas: "header header header" "main1 main1 ads" "pieDePagina1 pieDePagina1 pieDePagina1";
+  grid-template-areas: "header header header" "mainGrid mainGrid ads" "pieDePagina1 pieDePagina1 pieDePagina1";
 }
 
 .main0 {
-  grid-area: main1;
+  grid-area: mainGrid;
   grid-column-start: 2;
   grid-row-start: 2;
   justify-content: center;

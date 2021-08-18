@@ -4,43 +4,6 @@
     max-width: 960px;
 }
 
-.pieDePag1 {
-    grid-area: pieDePagina1;
-    min-height: 120px;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    .pagos1 {
-        grid-column: 1;
-        grid-row: 3;
-        justify-items: start;
-        align-items: start;
-        justify-content: start;
-        font-size: 17px;
-        font-family: $font-use-regular;
-        font-style: italic;
-        margin-left: 0.5rem;
-    }
-    .redes1 {
-        grid-column: 2;
-        grid-row: 3;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-        font-family: $font-use-regular;
-        font-weight: 300;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-}
-
-.leyendaPagosAceptados {
-    font-size: 17px;
-    font-family: $font-use-regular;
-    font-style: italic;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-bottom: 0px;
+.parrafoFooter {
+    color: white;
 }
