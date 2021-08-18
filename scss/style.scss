@@ -86,7 +86,7 @@ body {
     position: fixed;
     width: 8%;
     bottom: 72px;
-    left: 40px;
+    left: 0px;
     border-radius: 5px;
     text-align: center;
     margin: 0 auto;
@@ -104,7 +104,7 @@ body {
 .inputContacto {
     width: 300px;
     height: 30px;
-    transition: all 1s;
+    transition: all 0.3s;
     &:focus {
         width: 330px;
         font-size: 20px;
@@ -435,6 +435,7 @@ select {
     .boxFormulario {
         margin-bottom: 10px;
         justify-content: center;
+        width: 97%;
     }
     .botones {
         display: flex;
