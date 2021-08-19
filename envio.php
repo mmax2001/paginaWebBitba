@@ -20,7 +20,7 @@ $mensaje .= "Mensaje: " . $_POST['mensaje'] . " \r\n";
 $mensaje .= "Enviado el " . date('d/m/Y', time());
 $mensaje .= "Desea recibir novedades:" .$novedades "\r\n";
 
-$para = 'maxi2001@gmail.com'; // El mail a donde van a llegar los mensajes
+$para = 'bitbatienda@gmail.com'; // El mail a donde van a llegar los mensajes
 $asunto = 'Mensaje de mi sitio web';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
