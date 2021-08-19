@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="41mm"
+   height="16mm"
+   viewBox="0 0 40.999999 16"
    version="1.1"
    id="svg1020"
-   sodipodi:docname="dibujo7.svg"
+   sodipodi:docname="dibujoLogoMarca.svg"
    inkscape:export-filename="C:\Users\maxi\Documents\proyectoPagina\imagenes\dibujo3.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.4665165"
-     inkscape:cx="378.33603"
-     inkscape:cy="487.65693"
+     inkscape:zoom="1.8756036"
+     inkscape:cx="142.08759"
+     inkscape:cy="94.10304"
      inkscape:window-width="1440"
      inkscape:window-height="837"
      inkscape:window-x="-8"
@@ -37,11 +37,16 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      lock-margins="false"
-     fit-margin-top="14"
-     fit-margin-left="14">
+     fit-margin-top="12"
+     fit-margin-left="12"
+     fit-margin-bottom="12"
+     fit-margin-right="26"
+     width="60mm">
     <inkscape:grid
        type="xygrid"
-       id="grid1081" />
+       id="grid1081"
+       originx="-73.779625"
+       originy="-104.0661" />
   </sodipodi:namedview>
   <defs
      id="defs1017">
@@ -66,12 +71,13 @@
        x2="120.56453"
        y2="139.24298"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-19.276618,-14.125566)" />
+       gradientTransform="translate(-32.026293,-26.99562)" />
   </defs>
   <g
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-73.779625,-104.0661)">
     <path
        sodipodi:type="star"
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1"
@@ -86,7 +92,7 @@
        sodipodi:arg2="2.0943951"
        inkscape:rounded="0"
        inkscape:randomized="0"
-       transform="matrix(0.04146716,0,0,0.04146716,70.378912,105.25593)"
+       transform="matrix(0.04146716,0,0,0.04146716,57.629237,92.385876)"
        inkscape:transform-center-x="-3.6331027e-06"
        inkscape:transform-center-y="4.5296143e-06"
        d="m 580,600 -103.92305,-60 0,-120 L 580,360 l 103.92305,60 0,120 z"
@@ -96,23 +102,34 @@
     <path
        id="path7582-4"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.0492932;stroke-opacity:1"
-       d="m 94.429862,122.25746 -2.47564,1.4307 -0.0225,2.90302 2.45313,1.47233 2.47563,-1.43078 0.0225,-2.90294 z"
+       d="m 81.680187,109.38741 -2.47564,1.4307 -0.0225,2.90302 2.45313,1.47233 2.47563,-1.43078 0.0225,-2.90294 z"
        inkscape:export-filename="C:\Users\maxi\Documents\proyectoPagina\imagenes\dibujo3.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <path
        id="path7826-9"
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0414671;stroke-opacity:1"
-       d="m 94.429862,123.0868 -1.79556,1.03668 v 2.07336 l 1.79556,1.03668 1.79556,-1.03668 v -2.07336 z"
+       d="m 81.680187,110.21675 -1.79556,1.03668 v 2.07336 l 1.79556,1.03668 1.79556,-1.03668 v -2.07336 z"
        inkscape:export-filename="C:\Users\maxi\Documents\proyectoPagina\imagenes\dibujo3.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <ellipse
        style="mix-blend-mode:color-burn;fill:url(#linearGradient2024);fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none"
        id="path2016"
-       cx="94.521019"
-       cy="125.11742"
+       cx="81.771347"
+       cy="112.24737"
        rx="6.6413937"
        ry="6.9513159" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="88.992767"
+       y="116.05154"
+       id="text2917"><tspan
+         sodipodi:role="line"
+         id="tspan2915"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.264583"
+         x="88.992767"
+         y="116.05154">Bitba</tspan></text>
   </g>
 </svg>

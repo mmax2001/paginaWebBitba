@@ -78,7 +78,7 @@ body {
     position: fixed;
     width: 8%;
     bottom: 72px;
-    left: 0px;
+    left: 40px;
     border-radius: 5px;
     text-align: center;
     margin: 0 auto;
@@ -130,7 +130,7 @@ legend {
 }
 
 .bordesRedondeados {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 table {
@@ -244,37 +244,6 @@ select {
         box-shadow: 2px 2px 3px #999;
         transition: 300ms all ease;
     }
-    .pieDePag1 {
-        grid-area: pieDePagina1;
-        justify-items: start;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        padding: 10px;
-        width: 67%;
-        .redes1 {
-            justify-items: center;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Ubuntu', 'Ubuntu-Light';
-            font-weight: 300;
-            margin-bottom: 10px;
-            text-align: center;
-            margin-right: 0px;
-            margin-top: 10px;
-            margin-bottom: 150px;
-        }
-        .pagos1 {
-            justify-items: center;
-            align-items: center;
-            justify-content: center;
-            font-size: 17px;
-            font-family: 'Ubuntu', 'Ubuntu-Regular';
-            font-style: italic;
-            margin-top: 50px;
-        }
-    }
     // .btnVolverArriba {
     //     width: 18%;
     // }
@@ -326,37 +295,6 @@ select {
         justify-content: flex-start;
         width: fit-content;
         margin-left: 460px;
-    }
-    .pieDePag1 {
-        grid-area: pieDePagina1;
-        justify-items: start;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        padding: 10px;
-        width: 67%;
-        .redes1 {
-            justify-items: center;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Ubuntu', 'Ubuntu-Light';
-            font-weight: 300;
-            margin-bottom: 10px;
-            text-align: center;
-            margin-right: 0px;
-            margin-top: 10px;
-            margin-bottom: 150px;
-        }
-        .pagos1 {
-            justify-items: center;
-            align-items: center;
-            justify-content: center;
-            font-size: 17px;
-            font-family: 'Ubuntu', 'Ubuntu-Regular';
-            font-style: italic;
-            margin-top: 50px;
-        }
     }
     // .btnVolverArriba {
     //     width: 28%;
@@ -439,37 +377,6 @@ select {
         padding: 16px;
         margin: 5px 5px;
     }
-    .pieDePag1 {
-        grid-area: pieDePagina1;
-        justify-items: start;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        padding: 10px;
-        width: 67%;
-        .redes1 {
-            justify-items: center;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Ubuntu', 'Ubuntu-Light';
-            font-weight: 300;
-            margin-bottom: 10px;
-            text-align: center;
-            margin-right: 0px;
-            margin-top: 10px;
-            margin-bottom: 150px;
-        }
-        .pagos1 {
-            justify-items: center;
-            align-items: center;
-            justify-content: center;
-            font-size: 17px;
-            font-family: 'Ubuntu', 'Ubuntu-Regular';
-            font-style: italic;
-            margin-top: 50px;
-        }
-    }
     // .btnVolverArriba {
     //     width: 35%;
     // }
@@ -482,7 +389,8 @@ select {
         text-align: center;
         margin: 0 auto;
         background-color: white;
-        padding: 5px 10px;
+        padding: 5px 20px;
+        padding-right: 60px;
         z-index: 6;
         box-shadow: 2px 2px 3px #999;
         transition: 300ms all ease;
