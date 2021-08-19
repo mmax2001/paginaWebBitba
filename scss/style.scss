@@ -250,6 +250,9 @@ select {
     .botonDarkMode {
         margin-right: 10px;
     }
+    .colMobile {
+        display: none;
+    }
 }
 
 
@@ -325,6 +328,9 @@ select {
     }
     .dropdown {
         margin: 10px 10px;
+    }
+    .colMobile {
+        display: none;
     }
 }
 
@@ -407,5 +413,8 @@ select {
     }
     .dropdown {
         margin: 10px 10px;
+    }
+    .colMobile {
+        display: none;
     }
 }

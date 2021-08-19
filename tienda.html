@@ -49,7 +49,7 @@
         <div class="botonDarkMode botonDesktop">
             <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
                         <span>
-                            <i class="fa fa-moon-o" style="font-size: 13px;margin-left: 21px;margin-top: 0px;"></i>
+                            <i class="fa fa-moon-o iconoMoon"></i>
                         </span>
                         <span></span>
                         </button>
@@ -112,8 +112,8 @@
                                 <hr>
                                 <!-- Price -->
                                 <h6 class="mb-0">
-                                    <span class="text-danger mr-1">$450.00</span>
-                                    <span class="text-grey"><s>$600.99</s></span>
+                                    <span class="text-danger mr-1">$450,00</span>
+                                    <span class="text-grey"><s>$600,99</s></span>
                                 </h6>
                                 <!-- range field -->
                                 <form>
@@ -139,8 +139,8 @@
                                 <hr>
                                 <!-- Price -->
                                 <h6 class="mb-0">
-                                    <span class="text-danger mr-1">$1200.99</span>
-                                    <span class="text-grey"><s>$1600.99</s></span>
+                                    <span class="text-danger mr-1">$1.200,99</span>
+                                    <span class="text-grey"><s>$1.600,99</s></span>
                                 </h6>
                                 <!-- range field -->
                                 <form>
@@ -166,8 +166,8 @@
                                 <hr>
                                 <!-- Price -->
                                 <h6 class="mb-0">
-                                    <span class="text-danger mr-1">$6200.99</span>
-                                    <span class="text-grey"><s>$8600.99</s></span>
+                                    <span class="text-danger mr-1">$6.200,99</span>
+                                    <span class="text-grey"><s>$8.600,99</s></span>
                                 </h6>
                                 <!-- range field -->
                                 <form>
@@ -193,8 +193,8 @@
                                 <hr>
                                 <!-- Price -->
                                 <h6 class="mb-0">
-                                    <span class="text-danger mr-1">$2200.99</span>
-                                    <span class="text-grey"><s>$2600.99</s></span>
+                                    <span class="text-danger mr-1">$2.200,99</span>
+                                    <span class="text-grey"><s>$2.600,99</s></span>
                                 </h6>
                                 <!-- range field -->
                                 <form>
@@ -219,8 +219,8 @@
                                 <hr>
                                 <!-- price -->
                                 <h6 class="mb-0">
-                                    <span class="text-danger mr-1">$40200.99</span>
-                                    <span class="text-grey"><s>$42600.99</s></span>
+                                    <span class="text-danger mr-1">$40.200</span>
+                                    <span class="text-grey"><s>$42.600</s></span>
                                 </h6>
                                 <!-- range field -->
                                 <form>
@@ -236,17 +236,95 @@
                 </div>
                 <div class="col-12 col-md-4 col-lg-4">
                     <div class="card1">
-                        <img src="imagenes/rigestructura.jpg" class="card-img-top" alt="rig estructura 7 gpus">
+                        <img src="imagenes/rig5GPUs.jpg" class="card-img-top" alt="rig estructura 5 gpus">
                         <div class="card-body">
-                            <h5 class="card-title">Rig de mineria para 7 gpus</h5>
-                            <p class="card-text">Rig apto para 7 gpus, estructura en aluminio perfil Bosch 20x20</p>
+                            <h5 class="card-title">Estructura de rig para 5 gpus</h5>
+                            <p class="card-text">Rig apto para 5 gpus, estructura en aluminio perfil Bosch 20x20</p>
                             <section class="card-body">
                                 <!-- divider -->
                                 <hr>
                                 <!-- price -->
                                 <h6 class="mb-0">
-                                    <span class="text-danger mr-1">$11200.99</span>
-                                    <span class="text-grey"><s>$12600.99</s></span>
+                                    <span class="text-danger mr-1">$11.200</span>
+                                    <span class="text-grey"><s>$12.600</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" size="3" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/rigCompleto.jpg" class="card-img-top" alt="rig completo 7 gpus">
+                        <div class="card-body">
+                            <h5 class="card-title">Rig de mineria 7 gpus</h5>
+                            <p class="card-text">Rig completo 7 gpus, incluye placas nVidia 3060,fuente y motherboard</p>
+                            <section class="card-body">
+                                <!-- divider -->
+                                <hr>
+                                <!-- price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$1.120.000</span>
+                                    <span class="text-grey"><s>$1.260.000</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" size="3" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/rigCompleto.jpg" class="card-img-top" alt="rig completo 7 gpus">
+                        <div class="card-body">
+                            <h5 class="card-title">Rig de mineria 7 gpus</h5>
+                            <p class="card-text">Rig completo 7 gpus, incluye placas nVidia 3070,fuente y motherboard</p>
+                            <section class="card-body">
+                                <!-- divider -->
+                                <hr>
+                                <!-- price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$1.304.000</span>
+                                    <span class="text-grey"><s>$1.345.000</s></span>
+                                </h6>
+                                <!-- range field -->
+                                <form>
+                                    <p>Cantidad</p>
+                                    <input type="range" name="amountRange" min="1" max="20" value="0" size="3" oninput="this.form.amountInput.value=this.value" />
+                                    <input type="number" name="amountInput" min="1" max="20" value="0" oninput="this.form.amountRange.value=this.value" />
+                                </form>
+                                <!-- buttons -->
+                                <button type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Agregar al carrito</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card1">
+                        <img src="imagenes/rigCompleto.jpg" class="card-img-top" alt="rig completo 7 gpus">
+                        <div class="card-body">
+                            <h5 class="card-title">Rig de mineria 7 gpus</h5>
+                            <p class="card-text">Rig completo 7 gpus, incluye placas nVidia 3080,fuente y motherboard</p>
+                            <section class="card-body">
+                                <!-- divider -->
+                                <hr>
+                                <!-- price -->
+                                <h6 class="mb-0">
+                                    <span class="text-danger mr-1">$1.650.000</span>
+                                    <span class="text-grey"><s>$1.670.000</s></span>
                                 </h6>
                                 <!-- range field -->
                                 <form>

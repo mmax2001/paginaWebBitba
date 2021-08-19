@@ -344,7 +344,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   top: 0;
   left: 0;
   width: 40px;
-  height: 19px;
+  height: 20px;
   border-radius: 10px;
   background-color: #d6d7db;
   box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.4);
@@ -361,6 +361,12 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   border-radius: 50%;
   box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.4);
   transition: 0.3s;
+}
+
+.iconoMoon {
+  font-size: 13px;
+  margin-left: 22px;
+  margin-top: 0px;
 }
 
 body {
@@ -604,6 +610,10 @@ select {
   .botonDarkMode {
     margin-right: 10px;
   }
+
+  .colMobile {
+    display: none;
+  }
 }
 /*Media para tablets pequeñas*/
 @media all and (min-width: 480px) and (max-width: 767px) {
@@ -681,6 +691,10 @@ select {
 
   .dropdown {
     margin: 10px 10px;
+  }
+
+  .colMobile {
+    display: none;
   }
 }
 /*Media para telefonos con pantalla vertical*/
@@ -766,6 +780,10 @@ select {
 
   .dropdown {
     margin: 10px 10px;
+  }
+
+  .colMobile {
+    display: none;
   }
 }
 
