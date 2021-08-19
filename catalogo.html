@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Productos</title>
+</head>
+
+<body>
+
+    <!-- inicio encabezado -->
+
+    <!--header nav-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" id="volverArriba">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/dibujoLogo.svg" class="botonDesktop" alt="logo Bitba">
+                <img src="imagenes/dibujoLogoMarca.svg" class="botonMobile" alt="logo y marca Bitba">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="soporte.html">Soporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="botonDarkMode botonDesktop">
+                <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                        <span>                            
+                            <i class="fa fa-moon-o iconoMoon"></i>
+                        </span>
+                        <span></span>
+                        </button>
+            </div>
+
+            <div class="dropdown botonDesktop">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Idioma
+                        </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">English</a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--header nav-->
+
+    <!-- fin encabezado -->
+
+    <!-- contenido principal -->
+    <main>
+
+        <section class="botonMobile">
+            <div class="botonDarkMode">
+                <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                            <span>
+                                <i class="fa fa-moon-o" style="font-size: 13px;margin-left: 21px;margin-top: 0px;"></i>
+                            </span>
+                            <span></span>
+                </button>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Idioma
+                            </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">English</a>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="animate__animated animate__flipInY" style="margin-bottom: 30px;">Catalogo de Productos en Bitba</h1>
+
+        <!-- Tabla Catalogo -->
+        <div class="table" border="1" cellpadding="10" padding="10px">
+            <table class="table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripcion</th>
+                        <th class="colMobile">Dimensiones(alto cm x largo cm x ancho cm)</th>
+                        <th class="colMobile">Peso</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>adaptador riser pcie para conectar placa de video version 009s gold</td>
+                        <td class="colMobile">20 x 10 x 5</td>
+                        <td class="colMobile">0.20 kg</td>
+                        <td><img src="imagenes/VER009SPCIRiser.jpg" width="100px" alt="riser individual" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>adaptador riser multiple para conectar varias placas de video</td>
+                        <td class="colMobile">3 x 10 x 10</td>
+                        <td class="colMobile">0.60 kg</td>
+                        <td><img src="imagenes/RiserMulti0.jpg" width="100px" alt="riser multiple" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>Adaptador M2 a PCIE</td>
+                        <td class="colMobile">2 x 7 x 3</td>
+                        <td class="colMobile">0.12 kg</td>
+                        <td><img src="imagenes/adaptadorM2PCIE.jpg" width="100px" alt="adaptador M2 a PCIE" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>Adaptador para conectar 4 placas PCIE mediante riser </td>
+                        <td class="colMobile">10 x 10 x 2</td>
+                        <td class="colMobile">0.4 kg</td>
+                        <td><img src="imagenes/adaptador4PCIE.jpg" width="100px" alt="adaptador a cuatro PCIE" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>adaptador breakout para fuente servidor</td>
+                        <td class="colMobile">10 x 10 x 2</td>
+                        <td class="colMobile">0.15 kg</td>
+                        <td><img src="imagenes/breakOut.jpg" width="100px" alt="placa breakout" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador</td>
+                        <td>Dummy HDMI</td>
+                        <td class="colMobile">1.5 x 1.5 x 0.5</td>
+                        <td class="colMobile">0.025 kg</td>
+                        <td><img src="imagenes/hdmiDummy.jpg" width="100px" alt="Dummy hdmi" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Cable</td>
+                        <td>cable adaptador para conector cpu de fuente </td>
+                        <td class="colMobile">5 x 15 x 2</td>
+                        <td class="colMobile">0.10 kg</td>
+                        <td><img src="imagenes/cablecpupcie.jpg" width="100px" alt="cable cpu pcie" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Cable</td>
+                        <td>cable con boton de reset </td>
+                        <td class="colMobile">0.5 x 25 x 1</td>
+                        <td class="colMobile">0.05 kg</td>
+                        <td><img src="imagenes/adaptadorCableReset.jpg" width="100px" alt="cable con boton de reset" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Cable</td>
+                        <td>cable power y reset con leds </td>
+                        <td class="colMobile">0.5 x 25 x 1</td>
+                        <td class="colMobile">0.1 kg</td>
+                        <td><img src="imagenes/cablePowerReset.jpg" width="100px" alt="cable power y reset con leds" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Cable</td>
+                        <td>cable pcie splitter 8 pines a 6+2 pines</td>
+                        <td class="colMobile">0.5 x 12 x 1</td>
+                        <td class="colMobile">0.125 kg</td>
+                        <td><img src="imagenes/splitter8pin-a-2x8.jpg" width="100px" alt="cable splitter pcie 8 pines a 2+6 pines" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Cable</td>
+                        <td>cable adaptador para conectar 2 fuentes ATX de 24 pines </td>
+                        <td class="colMobile">1 x 30 x 5</td>
+                        <td class="colMobile">0.125 kg</td>
+                        <td><img src="imagenes/cable-de-fuente-ATX-de-24-pines-sincronizador.jpg" width="100px" alt="cable para sincronizar dos fuentes" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Cable</td>
+                        <td>cable adaptador para conectar 3 fuentes ATX de 24 pines </td>
+                        <td class="colMobile">1 x 30 x 5</td>
+                        <td class="colMobile">0.175 kg</td>
+                        <td><img src="imagenes/cable-de-fuente-ATX-de-24-pines-sincronizador3.jpg" width="100px" alt="cable para sincronizar tres fuentes" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Estructura</td>
+                        <td>estructura rig apta para 7 gpus</td>
+                        <td class="colMobile">45 x 80 x 30</td>
+                        <td class="colMobile">0.6 kg</td>
+                        <td><img src="imagenes/rig7GPUs.jpg" width="100px" alt="rig estructura aluminio 7 gpus" class="bordesRedondeados"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Fuente</td>
+                        <td>fuente server 1400w 80 plus platinum </td>
+                        <td class="colMobile">20 x 10 x 5</td>
+                        <td class="colMobile">0.7 kg</td>
+                        <td><img src="imagenes/fuente1400W.jpg" width="100px" alt="fuente server 1400W" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Rig</td>
+                        <td>Rig de mineria 6 gpus 3060ti</td>
+                        <td class="colMobile">45 x 80 x 30</td>
+                        <td class="colMobile">2.5 kg</td>
+                        <td><img src="imagenes/rig3060ti.jpg" width="100px" alt="rig 7 gpus 3060ti" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Wallet</td>
+                        <td>wallet acero inoxidable</td>
+                        <td class="colMobile">10.2 x 1.6 x 1.6</td>
+                        <td class="colMobile">0.73 kg</td>
+                        <td><img src="imagenes/cryptosteel-capsule.jpg" width="100px" alt="wallet acero semillas" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Wallet</td>
+                        <td>wallet Trezor One</td>
+                        <td class="colMobile">0.5 x 3 x 5</td>
+                        <td class="colMobile">0.3 kg</td>
+                        <td><img src="imagenes/TrezorOne.jpg" width="100px" alt="wallet fisica Trezor" class="bordesRedondeados"></td>
+                    </tr>
+                    <tr>
+                        <td>Wallet</td>
+                        <td>wallet Ledger Nano X</td>
+                        <td class="colMobile">0.5 x 2 x 10</td>
+                        <td class="colMobile">0.35 kg</td>
+                        <td><img src="imagenes/LedgerNanoX.jpg" width="100px" alt="wallet fisica Ledger Nano X" class="bordesRedondeados"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnVolverArriba">
+            <a href="#volverArriba" class="frase">Volver Arriba</a>
+            <!-- <a href="#volverArriba" class="btnVolverArribaTexto">Volver Arriba</a> -->
+        </div>
+    </main>
+    <!-- cierre contenido principal -->
+
+    <!-- apertura de pie de pagina -->
+    <!-- remover container para tener el footer con full width. -->
+    <footer class="container my-5">
+        <!-- Footer -->
+        <section class="text-center text-lg-start text-white" style="background-color: #45526e">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <img src="imagenes/dibujo11.png" alt="Marca Bitba">
+                            <p>© 2021 Todos los derechos reservados: Bitba</p>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none" />
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Aceptamos</h6>
+                            <i class="fa fa-bitcoin" style="font-size:24px"></i>
+                            <i class="fa fa-cc-visa" style="font-size:24px"></i>
+                            <i class="fa fa-cc-discover" style="font-size:24px"></i>
+                        </div>
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Enlaces del sitio
+                            </h6>
+                            <p>
+                                <a class="text-white" href="index.html">Inicio</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="tienda.html">Tienda</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="catalogo.html">Catalogo</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="soporte.html">Soporte</a>
+                            </p>
+                            <p>
+                                <a class="text-white" href="contacto.html">Contacto</a>
+                            </p>
+                        </div>
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+                            <p class="parrafoFooter"><i class="fa fa-home mr-3"></i>Buenos Aires, BA 1824, AR</p>
+                            <p class="parrafoFooter"><i class="fa fa-envelope mr-3"></i>info@gmail.com</p>
+                            <p class="parrafoFooter"><i class="fa fa-phone mr-3"></i>+ 54 01 0800-0555-1234</p>
+                            <p class="parrafoFooter"><i class="fa fa-print mr-3"></i>+ 54 01 4765-3421</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <hr class="my-3">
+
+                <!-- Section: Copyright -->
+                <section class="p-3 pt-0">
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-7 col-lg-8 text-center text-md-start">
+                            <!-- Copyright -->
+                            <div class="p-3">
+                                <p class="parrafoFooter">Seguinos o contactanos tambien en nuestras redes sociales</p>
+                            </div>
+                            <!-- Copyright -->
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="telegram" role="button">
+                                <i class="fa fa-telegram" style="font-size: 24px;"></i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="whatsapp" role="button">
+                                <i class="fa fa-whatsapp" style="font-size: 24px;"></i>
+                            </a>
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="facebook" role="button">
+                                <i class="fa fa-facebook-official" style="font-size: 24px;"></i>
+                            </a>
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" aria-label="instagram" role="button">
+                                <i class="fa fa-instagram" style="font-size: 24px;"></i>
+                            </a>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                </section>
+                <!-- Section: Copyright -->
+            </div>
+            <!-- Grid container -->
+        </section>
+        <!-- Footer -->
+    </footer>
+    <!-- fin de .container -->
+
+    <!-- cierre de pie de pagina -->
+
+    <!-- script js de bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- script dark-mode -->
+
+    <script>
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }
+        }
+    </script>
+
+    <script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
+
+    <!-- script animate wow -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!--JS Boostrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
