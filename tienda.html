@@ -40,6 +40,12 @@
                 <img src="imagenes/dibujoLogo.svg" class="botonDesktop" alt="logo Bitba">
                 <img src="imagenes/logoMarca.svg" class="botonMobile" alt="logo y marca Bitba">
             </a>
+
+            <div class="botonMobile wrapper">
+                <i class="fa" style="font-size:24px">&#xf07a;</i>
+                <span> 5 </span>
+            </div>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -65,25 +71,32 @@
                 </ul>
 
             </div>
+
+            <section class="botonDesktop">
+                <i class="fa" style="font-size:24px">&#xf07a;</i>
+                <span class='badge badge-warning' id='lblCartCount'> 5 </span>
+            </section>
+
             <section class="botonDarkMode botonDesktop">
                 <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
                         <span>
                             <i class="fa fa-moon-o iconoMoon"></i>
                         </span>
                         <span></span>
-                        </button>
+                </button>
             </section>
 
             <section class="dropdown botonDesktop">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Idioma
-                        </button>
+                </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">Spanish</a>
                     <a class="dropdown-item" href="#">English</a>
 
                 </div>
             </section>
+
         </nav>
     </header>
     <!--header nav-->
@@ -474,6 +487,9 @@
     <!-- fin de .container -->
 
     <!-- cierre de pie de pagina -->
+
+    <!-- script del carro de compras -->
+    <script src="js/main.js"></script>
 
     <!-- script dark-mode -->
 

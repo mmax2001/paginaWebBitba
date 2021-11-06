@@ -408,6 +408,25 @@ body {
   grid-area: ads;
 }
 
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.wrapper {
+  position: relative;
+  left: 50px;
+}
+
+.wrapper span {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+
 .btn {
   font-weight: 400;
   font-size: 0.85rem;
