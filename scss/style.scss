@@ -53,9 +53,13 @@ body {
     border-radius: 9px;
 }
 
+.badge-warning {
+    display: none;
+}
+
 .wrapper {
     position: relative;
-    left: 50px;
+    right: 10px;
 }
 
 .wrapper span {
@@ -255,6 +259,10 @@ select {
     .colMobile {
         display: none;
     }
+    .wrapper {
+        position: relative;
+        left: 250px;
+    }
 }
 
 
@@ -316,6 +324,10 @@ select {
     }
     .colMobile {
         display: none;
+    }
+    .wrapper {
+        position: relative;
+        left: 90px;
     }
 }
 
@@ -383,5 +395,9 @@ select {
     }
     .colMobile {
         display: none;
+    }
+    .wrapper {
+        position: relative;
+        left: 30px;
     }
 }

@@ -416,9 +416,13 @@ body {
   border-radius: 9px;
 }
 
+.badge-warning {
+  display: none;
+}
+
 .wrapper {
   position: relative;
-  left: 50px;
+  right: 10px;
 }
 
 .wrapper span {
@@ -626,6 +630,11 @@ select {
   .colMobile {
     display: none;
   }
+
+  .wrapper {
+    position: relative;
+    left: 250px;
+  }
 }
 /*Media para tablets pequeñas*/
 @media all and (min-width: 480px) and (max-width: 767px) {
@@ -692,6 +701,11 @@ select {
 
   .colMobile {
     display: none;
+  }
+
+  .wrapper {
+    position: relative;
+    left: 90px;
   }
 }
 /*Media para telefonos con pantalla vertical*/
@@ -765,6 +779,11 @@ select {
 
   .colMobile {
     display: none;
+  }
+
+  .wrapper {
+    position: relative;
+    left: 30px;
   }
 }
 
