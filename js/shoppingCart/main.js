@@ -1,4 +1,5 @@
 //Creo la clase Producto
+
 class Producto {
     constructor(nombre, precio, id, cantidad, stock) {
         this.nombre = nombre;
@@ -13,9 +14,8 @@ class Producto {
         this.precio = this.precio * 1.21;
     }
 
-    updateStock() {
-        this.stock = this.stock - this.cantidad;
-        return this.stock;
+    set updateStock(cantidad) {
+        this.stock = this.stock - cantidad;
     }
     getCantidad() {
         return cantidad;
@@ -23,6 +23,7 @@ class Producto {
 }
 
 //Declaro el array almacen que contiene objetos de tipo Producto
+
 const almacen = [];
 carrito = [];
 almacen.push(new Producto("cable adaptador cpu fuente", 600.99, 1, 0, 20));
@@ -36,103 +37,136 @@ almacen.push(new Producto("rig de mineria 7 gpus", 1304000, 8, 0, 20));
 almacen.push(new Producto("rig de mineria 7 gpus", 1650000, 9, 0, 20));
 
 //Almaceno en el storage el contenido del alamacen
+
 localStorage.setItem('productosAlmacen', JSON.stringify(almacen));
 console.log(window.localStorage.length);
 
-//Agrego items al carrito de compras desde el listado de productos en almacen
-// do {
+//Compruebo por consola contenidos en arrays almacen y carrito
 
-//     choice = parseInt(prompt("Bienvenido a la tienda Bitba,seleccione el codigo del producto que desee comprar o ingrese 0 para salir \n codigo #1: 1\n codigo #2: 2 \n codigo #3: 3"));
-//     if (choice != 0) {
-//         carrito.push(almacen.filter(Producto => Producto.id == choice));
-//     }
+// console.log(almacen);
+// console.log(almacen[0]);
+// console.log(carrito);
 
-// } while (choice != 0);
-
-console.log(almacen);
-console.log(almacen[0]);
-console.log(carrito);
-
-let cantidad = 0;
+//Capturo los eventos en cada boton "Agregar al carrito"
+//y en el numero seleccionado de cantidad de items
 
 const sendButton1 = document.getElementById("sendBtn1");
-sendButton1.addEventListener('click', addToCart);
+sendButton1.addEventListener('click', (event) => {
+    const quantity1 = document.getElementById("quantityBtn1");
+    quantity1.addEventListener('change', addToBuyCart(1, parseInt(quantity1.value)));
+})
 
 const sendButton2 = document.getElementById("sendBtn2");
-sendButton2.addEventListener('click', addToCart);
+sendButton2.addEventListener('click', (event) => {
+    const quantity2 = document.getElementById("quantityBtn2");
+    quantity2.addEventListener('change', addToBuyCart(2, parseInt(quantity2.value)));
+})
 
 const sendButton3 = document.getElementById("sendBtn3");
-sendButton3.addEventListener('click', addToCart);
+sendButton3.addEventListener('click', (event) => {
+    const quantity3 = document.getElementById("quantityBtn3");
+    quantity3.addEventListener('change', addToBuyCart(3, parseInt(quantity3.value)));
+})
 
 const sendButton4 = document.getElementById("sendBtn4");
-sendButton4.addEventListener('click', addToCart);
+sendButton4.addEventListener('click', (event) => {
+    const quantity4 = document.getElementById("quantityBtn4");
+    quantity4.addEventListener('change', addToBuyCart(4, parseInt(quantity4.value)));
+})
 
 const sendButton5 = document.getElementById("sendBtn5");
-sendButton5.addEventListener('click', addToCart);
+sendButton5.addEventListener('click', (event) => {
+    const quantity5 = document.getElementById("quantityBtn5");
+    quantity5.addEventListener('change', addToBuyCart(5, parseInt(quantity5.value)));
+})
 
 const sendButton6 = document.getElementById("sendBtn6");
-sendButton6.addEventListener('click', addToCart);
+sendButton6.addEventListener('click', (event) => {
+    const quantity6 = document.getElementById("quantityBtn6");
+    quantity6.addEventListener('change', addToBuyCart(6, parseInt(quantity6.value)));
+})
 
 const sendButton7 = document.getElementById("sendBtn7");
-sendButton7.addEventListener('click', addToCart);
+sendButton7.addEventListener('click', (event) => {
+    const quantity7 = document.getElementById("quantityBtn7");
+    quantity7.addEventListener('change', addToBuyCart(7, parseInt(quantity7.value)));
+})
 
 const sendButton8 = document.getElementById("sendBtn8");
-sendButton8.addEventListener('click', addToCart);
+sendButton8.addEventListener('click', (event) => {
+    const quantity8 = document.getElementById("quantityBtn8");
+    quantity8.addEventListener('change', addToBuyCart(8, parseInt(quantity8.value)));
+})
 
 const sendButton9 = document.getElementById("sendBtn9");
-sendButton9.addEventListener('click', addToCart);
+sendButton9.addEventListener('click', (event) => {
+    const quantity9 = document.getElementById("quantityBtn9");
+    quantity9.addEventListener('change', addToBuyCart(9, parseInt(quantity9.value)));
+})
 
-//Agrego la seleccion del producto al carrito y actualizo la burbuja de
-//notificacion en el carrito con la cantidad de items
-function addToCart() {
-    const quantites = document.getElementsByClassName('quantityBtn1B');
-    // const prices = document.getElementsByClassName('price');
-    let carritoTotal = document.getElementById('cartTotalQ');
-    let totalQ = 0;
-    // let totalP=0
-    for (let i = 0; i < quantites.length; i++) {
-        totalQ += parseInt(quantites[i].value)
-            // totalP += Number(prices[i].value)*parseInt(quantites[i].value)
-    }
-    carritoTotal.innerHTML = totalQ;
-    if (cantidad != 0) {
-        almacen[0].cantidad = cantidad;
-        carrito.push(almacen.filter(Producto => Producto.id == 1));
-        console.log(carrito);
-        //     console.log(carrito[0]);
-        //     //Obtengo el numero de productos en el carrito
-        //     const itemsNumber = carrito.length;
-        //     console.log(itemsNumber);
-        //     //Prueba recorro el array para obtener la cantidad
-        //     //en cada producto del carrito
-        //     const primero = carrito[0];
-        //     // console.log(primero.getCantidad());
-        //     let totalItems = 0;
-        //     for (const item of carrito) {
-        //         console.log(item.cantidad);
-        //         totalItems = totalItems + item.cantidad;
-        //         console.log(totalItems);
-        //     }
-        //     console.log(totalItems);
-        //     //Creo el texto con el valor numerico de items en el carrito
-        //     newValue = document.createTextNode(itemsNumber);
-        //     //Obtengo los nodos de html correspondientes al carrito
-        //     let numItems = [];
-        //     numItems[0] = document.getElementById("lblCartCountMobile");
-        //     numItems[1] = document.getElementById("lblCartCountDesktop");
-        //     console.log(numItems[0]);
-        //     console.log(numItems[1]);
-        //     numItems[0].appendChild(newValue);
-        //     numItems[1].appendChild(newValue);
-        //     //Muestro burbuja con nro de items en carrito
-        //     if (carrito.length != 0) {
-        //         document.getElementById('lblCartCountMobile').style.display = "block";
-        //         document.getElementById('lblCartCountDesktop').style.display = "block";
-        //     }
-        // }
-    }
+// const sendButton1 = document.getElementById("sendBtn1");
+// const quantity1 = document.getElementById("quantityBtn1");
+// console.log(quantity1.value);
+// sendButton1.addEventListener('click', addToBuyCart(1, quantity1.value));
+// console.log(carrito);
 
+//Creo la funcion agregar al carrito
+//si id no esta incluido al array se agrega en la ultima posicion
+//si el id ya se eligio actualizo la cantidad del item en el array
+
+function addToBuyCart(id, cant) {
+    console.log("este valor tiene cant", cant);
+    console.log("este valor tiene id", id);
+    if (carrito.filter(Producto => Producto.id == id) == false) {
+        console.log("no esta el id");
+        carrito.push(almacen.filter(Producto => Producto.id == id));
+        console.log(carrito[0]);
+        carrito[carrito.length - 1].cantidad = cant;
+        carrito[carrito.length - 1].updateStock = cant;
+    } else {
+        console.log("esta el id");
+        for (let i = 0; i < carrito.length; i++) {
+            if (carrito[i].id = id) {
+                carrito[i].cantidad = carrito[i].cantidad + cant;
+                carrito[i].updateStock = carrito[i].cantidad;
+            }
+        }
+    }
+    console.log(carrito);
+    //Agrego al badge la cantidad total de items
+    let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
+    let cartTotalMobile = document.getElementById('lblCartCountMobile');
+    newValue = document.createTextNode(totalQuantity(carrito));
+    console.log("En el carrito hay este nro de items :", newValue);
+    cartTotalDesktop.appendChild(newValue);
+    cartTotalMobile.appendChild(newValue);
+
+    if (carrito.length != 0) {
+        document.getElementById('lblCartCountMobile').style.display = "block";
+        document.getElementById('lblCartCountDesktop').style.display = "block";
+    }
 }
+
+
+//Recorro el array carrito para calcular la cantidad de items elegidos
+
+function totalQuantity(carrito) {
+    let totalItems = 0;
+    for (const item of carrito) {
+        totalItems = totalItems + parseInt(item.cantidad);
+    }
+    console.log(totalItems);
+    return (totalItems);
+}
+
 //Almaceno en el storage el contenido del carrito
 localStorage.setItem('productosCarrito', JSON.stringify(carrito));
 console.log(window.localStorage.length);
+
+//Pruebo obtener un array con todos los nros de cantidades capturada
+//desde los productos
+const arrayQ = document.querySelectorAll('[data-q=btnQ1]');
+console.log(arrayQ);
+console.log(arrayQ[0].value);
+console.log(arrayQ[1].value);
+console.log(arrayQ.length);
