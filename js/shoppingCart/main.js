@@ -133,15 +133,17 @@ function addToBuyCart(id, cant) {
         }
     }
     console.log(carrito);
+    console.log("Total", totalQuantity(carrito));
     //Agrego al badge la cantidad total de items
     let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
     let cartTotalMobile = document.getElementById('lblCartCountMobile');
     newValue = document.createTextNode(totalQuantity(carrito));
     console.log("En el carrito hay este nro de items :", newValue);
-    cartTotalDesktop.appendChild(newValue);
-    cartTotalMobile.appendChild(newValue);
+    console.log(cartTotalDesktop);
+    cartTotalDesktop.textContent = String(totalQuantity(carrito));
+    cartTotalMobile.textContent = String(totalQuantity(carrito));
 
-    if (carrito.length != 0) {
+    if (carrito.length > 0) {
         document.getElementById('lblCartCountMobile').style.display = "block";
         document.getElementById('lblCartCountDesktop').style.display = "block";
     }
