@@ -1,4 +1,5 @@
 const carrito = localStorage.getItem('productosCarrito');
+console.log("el carrito es :", carrito);
 
 //Creo la clase Producto
 
@@ -41,7 +42,7 @@ almacen.push(new Producto("rig de mineria 7 gpus", 1650000, 9, 0, 20));
 
 for (const producto of almacen) {
     //Por cada producto además de los datos agregamos un botón 
-    $("body").append(`<div>
+    $(".container-p").append(`<div>
                         <input value="${producto.id}" type="hidden">
                         <h4>  Producto: ${producto.nombre}</h4>
                         <b> $ ${producto.precio}</b>

@@ -25,7 +25,7 @@ class Producto {
 //Declaro el array almacen que contiene objetos de tipo Producto
 
 const almacen = [];
-carrito = [];
+const carrito = [];
 almacen.push(new Producto("cable adaptador cpu fuente", 600.99, 1, 0, 20));
 almacen.push(new Producto("riser adaptador 1x a 16x", 1200.99, 2, 0, 20));
 almacen.push(new Producto("riser adaptador multiple", 6200.99, 3, 0, 20));
@@ -53,7 +53,7 @@ console.log(window.localStorage.length);
 const sendButton1 = document.getElementById("sendBtn1");
 sendButton1.addEventListener('click', (event) => {
     const quantity1 = document.getElementById("quantityBtn1");
-    quantity1.addEventListener('change', addToBuyCart(1, parseInt(quantity1.value)));
+    quantity1.addEventListener('change', addToBuyCart(parseInt(1), parseInt(quantity1.value)));
 })
 
 const sendButton2 = document.getElementById("sendBtn2");
@@ -115,25 +115,23 @@ sendButton9.addEventListener('click', (event) => {
 //si el id ya se eligio actualizo la cantidad del item en el array
 
 function addToBuyCart(id, cant) {
-    console.log("este valor tiene cant", cant);
-    console.log("este valor tiene id", id);
-    if (carrito.filter(Producto => Producto.id == id) == false) {
-        console.log("no esta el id");
-        carrito.push(almacen.filter(Producto => Producto.id == id));
-        console.log(carrito[0]);
+
+    const result = carrito.find(Producto => Producto.id == id);
+    if (result == undefined || carrito == []) {
+        carrito.push(almacen.find(Producto => Producto.id == id));
         carrito[carrito.length - 1].cantidad = cant;
         carrito[carrito.length - 1].updateStock = cant;
     } else {
         console.log("esta el id");
         for (let i = 0; i < carrito.length; i++) {
-            if (carrito[i].id = id) {
+            if (carrito[i].id == id) {
                 carrito[i].cantidad = carrito[i].cantidad + cant;
-                carrito[i].updateStock = carrito[i].cantidad;
+                carrito[i].updateStock = cant;
             }
         }
     }
-    console.log(carrito);
-    console.log("Total", totalQuantity(carrito));
+    console.log("Lista de productos en carrito :", carrito);
+
     //Agrego al badge la cantidad total de items
     let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
     let cartTotalMobile = document.getElementById('lblCartCountMobile');
@@ -167,8 +165,29 @@ console.log(window.localStorage.length);
 
 //Pruebo obtener un array con todos los nros de cantidades capturada
 //desde los productos
-const arrayQ = document.querySelectorAll('[data-q=btnQ1]');
-console.log(arrayQ);
-console.log(arrayQ[0].value);
-console.log(arrayQ[1].value);
-console.log(arrayQ.length);
+const arrayBtnBuy = document.querySelectorAll('[data-id]');
+console.log(arrayBtnBuy);
+console.log(arrayBtnBuy.length);
+// const agregarAlCarrito = (e) => {
+//     id = (e.target.dataset.id);
+//     console.log("el id es el siguiente", id);
+// }
+// arrayBtnBuy.forEach((btn) => addEventListener("click", agregarAlCarrito));
+
+//Pruebo de forma mas reducida capturar los productos y cantidades
+// arrayBtnBuy.forEach((btn) => addEventListener("click", (e) => {
+//     id = (e.target.dataset.id);
+//     console.log("El ID es : ", id);
+//     idString = "" + id + "";
+//     idString = "quantityBtn" + idString;
+//     console.log("el id a buscar es ", idString);
+
+//     const quantity = document.getElementById([idString]);
+//     console.log("El valor de quantity es :", quantity.value);
+//     quantity.addEventListener('change', addToBuyCart(id, parseInt(quantity.value)));
+// }));
+
+//$('.card1').fadeIn("slow");
+$('#sendBtn1').on('click', (e) => {
+    $('#image1').css('border', 'solid');
+});
