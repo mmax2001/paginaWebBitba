@@ -138,21 +138,10 @@ function addToBuyCart(id, cant) {
         console.log("Lista de productos en carrito :", carrito);
 
         //Agrego al badge la cantidad total de items
-        let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
-        let cartTotalMobile = document.getElementById('lblCartCountMobile');
-        newValue = document.createTextNode(totalQuantity(carrito));
-        console.log("En el carrito hay este nro de items :", newValue);
-        console.log(cartTotalDesktop);
-        cartTotalDesktop.textContent = String(totalQuantity(carrito));
-        cartTotalMobile.textContent = String(totalQuantity(carrito));
+        addToBadge(carrito);
 
-        if (carrito.length > 0) {
-            document.getElementById('lblCartCountMobile').style.display = "block";
-            document.getElementById('lblCartCountDesktop').style.display = "block";
-        }
-
-        const prodItem = carrito.find(Producto => Producto.id == id);
         //Modifico la leyenda de agregar al carrito si no tengo stock
+        const prodItem = carrito.find(Producto => Producto.id == id);
         if (prodItem.stock == 0) {
             // idBtn = "'#sendBtn" + id + "'";
             // console.log(idBtn);
@@ -175,9 +164,24 @@ function addToBuyCart(id, cant) {
     }
 }
 
+//Agrego al badge la cantidad total de items
+function addToBadge(arrayCart) {
+    let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
+    let cartTotalMobile = document.getElementById('lblCartCountMobile');
+    newValue = document.createTextNode(totalQuantity(arrayCart));
+    console.log("En el carrito hay este nro de items :", newValue);
+    console.log(cartTotalDesktop);
+    cartTotalDesktop.textContent = String(totalQuantity(arrayCart));
+    cartTotalMobile.textContent = String(totalQuantity(arrayCart));
+
+    if (arrayCart.length > 0) {
+        document.getElementById('lblCartCountMobile').style.display = "block";
+        document.getElementById('lblCartCountDesktop').style.display = "block";
+
+    }
+}
 
 //Recorro el array carrito para calcular la cantidad de items elegidos
-
 function totalQuantity(carrito) {
     let totalItems = 0;
     for (const item of carrito) {
@@ -191,7 +195,7 @@ function totalQuantity(carrito) {
 localStorage.setItem('productosCarrito', JSON.stringify(carrito));
 console.log(window.localStorage.length);
 
-//Pruebo obtener un array con todos los nros de cantidades capturada
+//FORMA 2 Pruebo obtener un array con todos los nros de cantidades capturada
 //desde los productos
 //const arrayBtnBuy = document.querySelectorAll('[data-id]');
 //console.log(arrayBtnBuy);
@@ -221,6 +225,8 @@ console.log(window.localStorage.length);
 //     (this).css('border', 'solid');
 // });
 
+
+//Remarco las imagenes de los productos elegidos
 $('#sendBtn1').on('click', (e) => {
     $('#image1').css('border', 'solid');
 });
