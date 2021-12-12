@@ -1,6 +1,7 @@
-const carrito = localStorage.getItem('productosCarrito');
+const carrito = JSON.parse(localStorage.getItem('productosCarrito')) || [];
 console.log("el carrito es :", carrito);
-
+const items = carrito.map((producto) => new(Producto(producto)));
+console.log(items);
 //Creo la clase Producto
 
 class Producto {
@@ -39,13 +40,27 @@ almacen.push(new Producto("rig de mineria 7 gpus", 1120000, 7, 0, 20));
 almacen.push(new Producto("rig de mineria 7 gpus", 1304000, 8, 0, 20));
 almacen.push(new Producto("rig de mineria 7 gpus", 1650000, 9, 0, 20));
 
-
 for (const producto of almacen) {
     //Por cada producto además de los datos agregamos un botón 
     $(".container-p").append(`<div>
                         <input value="${producto.id}" type="hidden">
-                        <h4>  Producto: ${producto.nombre}</h4>
+                        <h4>  Producto:${producto.cantidad} - ${producto.nombre}</h4>
                         <b> $ ${producto.precio}</b>
                         <button class="btn btn-primary btn-sm mr-1 my-1">Comprar</button>
                     </div>`);
-}
+};
+
+$('#mostrarStock').on('click', (e) => {
+    $.getJSON('prod.JSON', (respuesta, status) => {
+        if (status === 'success') {
+            respuesta.forEach((prod) => {
+                $('.container').append(`${prod.nombre}-${prod.cantidad}<br>`);
+            });
+        };
+    });
+});
+
+const api = 'https://apiv2.bitcoinaverage.com/indices/local/ticker/short?crypto=BTC&fiat=USD'
+$.get(api, p => {
+    document.querySelector('#pre').textContent = JSON.stringify(p, null, 2)
+});

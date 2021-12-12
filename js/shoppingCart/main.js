@@ -111,39 +111,67 @@ sendButton9.addEventListener('click', (event) => {
 // console.log(carrito);
 
 //Creo la funcion agregar al carrito
-//si id no esta incluido al array se agrega en la ultima posicion
-//si el id ya se eligio actualizo la cantidad del item en el array
+//Pregunto si id esta incluido al carrito, se agrega en la ultima posicion
+//si el id ya estaba, actualizo la cantidad del item en el array
 
 function addToBuyCart(id, cant) {
 
-    const result = carrito.find(Producto => Producto.id == id);
-    if (result == undefined || carrito == []) {
-        carrito.push(almacen.find(Producto => Producto.id == id));
-        carrito[carrito.length - 1].cantidad = cant;
-        carrito[carrito.length - 1].updateStock = cant;
-    } else {
-        console.log("esta el id");
-        for (let i = 0; i < carrito.length; i++) {
-            if (carrito[i].id == id) {
-                carrito[i].cantidad = carrito[i].cantidad + cant;
-                carrito[i].updateStock = cant;
+    $('#sendBtn1').on('click', (e) => {
+        $('#image1').css('border', 'solid');
+    });
+
+    if (cant > 0) {
+        const result = carrito.find(Producto => Producto.id == id);
+        if (result == undefined || carrito == []) {
+            carrito.push(almacen.find(Producto => Producto.id == id));
+            carrito[carrito.length - 1].cantidad = cant;
+            carrito[carrito.length - 1].updateStock = cant;
+        } else {
+            console.log("esta el id");
+            for (let i = 0; i < carrito.length; i++) {
+                if (carrito[i].id == id && ((carrito[i].stock) > 0)) {
+                    carrito[i].cantidad = carrito[i].cantidad + cant;
+                    carrito[i].updateStock = cant;
+                }
             }
         }
-    }
-    console.log("Lista de productos en carrito :", carrito);
+        console.log("Lista de productos en carrito :", carrito);
 
-    //Agrego al badge la cantidad total de items
-    let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
-    let cartTotalMobile = document.getElementById('lblCartCountMobile');
-    newValue = document.createTextNode(totalQuantity(carrito));
-    console.log("En el carrito hay este nro de items :", newValue);
-    console.log(cartTotalDesktop);
-    cartTotalDesktop.textContent = String(totalQuantity(carrito));
-    cartTotalMobile.textContent = String(totalQuantity(carrito));
+        //Agrego al badge la cantidad total de items
+        let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
+        let cartTotalMobile = document.getElementById('lblCartCountMobile');
+        newValue = document.createTextNode(totalQuantity(carrito));
+        console.log("En el carrito hay este nro de items :", newValue);
+        console.log(cartTotalDesktop);
+        cartTotalDesktop.textContent = String(totalQuantity(carrito));
+        cartTotalMobile.textContent = String(totalQuantity(carrito));
 
-    if (carrito.length > 0) {
-        document.getElementById('lblCartCountMobile').style.display = "block";
-        document.getElementById('lblCartCountDesktop').style.display = "block";
+        if (carrito.length > 0) {
+            document.getElementById('lblCartCountMobile').style.display = "block";
+            document.getElementById('lblCartCountDesktop').style.display = "block";
+        }
+
+        const prodItem = carrito.find(Producto => Producto.id == id);
+        //Modifico la leyenda de agregar al carrito si no tengo stock
+        if (prodItem.stock == 0) {
+            // idBtn = "'#sendBtn" + id + "'";
+            // console.log(idBtn);
+            idBtn = "sendBtn" + id;
+            console.log(idBtn);
+            //$([idBtn]).val('SinStock');
+            $(`#${ idBtn }`).val('SinStock');
+        }
+        //Remarco la imagen del producto seleccionado
+        // idBtn = "sendBtn" + id;
+        // console.log(idBtn);
+        // idImg = "image" + id;
+        // $("#" + idBtn).on('click', (e) => {
+        //     ("#" + idImg).css('border', 'solid');
+        // });
+        // $(`${idBtn }`).on('click', (e) => {
+        //     (`${idImg }`).css('border', 'solid');
+        // });
+
     }
 }
 
@@ -165,9 +193,9 @@ console.log(window.localStorage.length);
 
 //Pruebo obtener un array con todos los nros de cantidades capturada
 //desde los productos
-const arrayBtnBuy = document.querySelectorAll('[data-id]');
-console.log(arrayBtnBuy);
-console.log(arrayBtnBuy.length);
+//const arrayBtnBuy = document.querySelectorAll('[data-id]');
+//console.log(arrayBtnBuy);
+//console.log(arrayBtnBuy.length);
 // const agregarAlCarrito = (e) => {
 //     id = (e.target.dataset.id);
 //     console.log("el id es el siguiente", id);
@@ -188,6 +216,35 @@ console.log(arrayBtnBuy.length);
 // }));
 
 //$('.card1').fadeIn("slow");
+
+// $("#sendBtn1").on('click', (e) => {
+//     (this).css('border', 'solid');
+// });
+
 $('#sendBtn1').on('click', (e) => {
     $('#image1').css('border', 'solid');
+});
+$('#sendBtn2').on('click', (e) => {
+    $('#image2').css('border', 'solid');
+});
+$('#sendBtn3').on('click', (e) => {
+    $('#image3').css('border', 'solid');
+});
+$('#sendBtn4').on('click', (e) => {
+    $('#image4').css('border', 'solid');
+});
+$('#sendBtn5').on('click', (e) => {
+    $('#image5').css('border', 'solid');
+});
+$('#sendBtn6').on('click', (e) => {
+    $('#image6').css('border', 'solid');
+});
+$('#sendBtn7').on('click', (e) => {
+    $('#image7').css('border', 'solid');
+});
+$('#sendBtn8').on('click', (e) => {
+    $('#image8').css('border', 'solid');
+});
+$('#sendBtn9').on('click', (e) => {
+    $('#image9').css('border', 'solid');
 });
