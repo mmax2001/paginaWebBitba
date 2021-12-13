@@ -50,75 +50,17 @@ console.log(window.localStorage.length);
 //Capturo los eventos en cada boton "Agregar al carrito"
 //y en el numero seleccionado de cantidad de items
 
-const sendButton1 = document.getElementById("sendBtn1");
-sendButton1.addEventListener('click', (event) => {
-    const quantity1 = document.getElementById("quantityBtn1");
-    quantity1.addEventListener('change', addToBuyCart(parseInt(1), parseInt(quantity1.value)));
-})
-
-const sendButton2 = document.getElementById("sendBtn2");
-sendButton2.addEventListener('click', (event) => {
-    const quantity2 = document.getElementById("quantityBtn2");
-    quantity2.addEventListener('change', addToBuyCart(2, parseInt(quantity2.value)));
-})
-
-const sendButton3 = document.getElementById("sendBtn3");
-sendButton3.addEventListener('click', (event) => {
-    const quantity3 = document.getElementById("quantityBtn3");
-    quantity3.addEventListener('change', addToBuyCart(3, parseInt(quantity3.value)));
-})
-
-const sendButton4 = document.getElementById("sendBtn4");
-sendButton4.addEventListener('click', (event) => {
-    const quantity4 = document.getElementById("quantityBtn4");
-    quantity4.addEventListener('change', addToBuyCart(4, parseInt(quantity4.value)));
-})
-
-const sendButton5 = document.getElementById("sendBtn5");
-sendButton5.addEventListener('click', (event) => {
-    const quantity5 = document.getElementById("quantityBtn5");
-    quantity5.addEventListener('change', addToBuyCart(5, parseInt(quantity5.value)));
-})
-
-const sendButton6 = document.getElementById("sendBtn6");
-sendButton6.addEventListener('click', (event) => {
-    const quantity6 = document.getElementById("quantityBtn6");
-    quantity6.addEventListener('change', addToBuyCart(6, parseInt(quantity6.value)));
-})
-
-const sendButton7 = document.getElementById("sendBtn7");
-sendButton7.addEventListener('click', (event) => {
-    const quantity7 = document.getElementById("quantityBtn7");
-    quantity7.addEventListener('change', addToBuyCart(7, parseInt(quantity7.value)));
-})
-
-const sendButton8 = document.getElementById("sendBtn8");
-sendButton8.addEventListener('click', (event) => {
-    const quantity8 = document.getElementById("quantityBtn8");
-    quantity8.addEventListener('change', addToBuyCart(8, parseInt(quantity8.value)));
-})
-
-const sendButton9 = document.getElementById("sendBtn9");
-sendButton9.addEventListener('click', (event) => {
-    const quantity9 = document.getElementById("quantityBtn9");
-    quantity9.addEventListener('change', addToBuyCart(9, parseInt(quantity9.value)));
-})
-
 // const sendButton1 = document.getElementById("sendBtn1");
-// const quantity1 = document.getElementById("quantityBtn1");
-// console.log(quantity1.value);
-// sendButton1.addEventListener('click', addToBuyCart(1, quantity1.value));
-// console.log(carrito);
+// sendButton1.addEventListener('click', (event) => {
+//     const quantity1 = document.getElementById("quantityBtn1");
+//     quantity1.addEventListener('change', addToBuyCart(parseInt(1), parseInt(quantity1.value)));
+// })
+
 
 //Creo la funcion agregar al carrito
 //Pregunto si id esta incluido al carrito, se agrega en la ultima posicion
 //si el id ya estaba, actualizo la cantidad del item en el array
-
 function addToBuyCart(id, cant) {
-
-    $('#sendBtn1').on('click', (e) => {
-        $('#image1').css('border', 'solid');
-    });
 
     if (cant > 0) {
         const result = carrito.find(Producto => Producto.id == id);
@@ -151,16 +93,7 @@ function addToBuyCart(id, cant) {
             $(`#${ idBtn }`).val('SinStock');
         }
         //Remarco la imagen del producto seleccionado
-        // idBtn = "sendBtn" + id;
-        // console.log(idBtn);
-        // idImg = "image" + id;
-        // $("#" + idBtn).on('click', (e) => {
-        //     ("#" + idImg).css('border', 'solid');
-        // });
-        // $(`${idBtn }`).on('click', (e) => {
-        //     (`${idImg }`).css('border', 'solid');
-        // });
-
+        remarkProduct(id);
     }
 }
 
@@ -195,62 +128,62 @@ function totalQuantity(carrito) {
 localStorage.setItem('productosCarrito', JSON.stringify(carrito));
 console.log(window.localStorage.length);
 
-//FORMA 2 Pruebo obtener un array con todos los nros de cantidades capturada
-//desde los productos
-//const arrayBtnBuy = document.querySelectorAll('[data-id]');
-//console.log(arrayBtnBuy);
-//console.log(arrayBtnBuy.length);
-// const agregarAlCarrito = (e) => {
-//     id = (e.target.dataset.id);
-//     console.log("el id es el siguiente", id);
-// }
-// arrayBtnBuy.forEach((btn) => addEventListener("click", agregarAlCarrito));
+//Obtengo un array con todos los valores de cantidades capturadas
+//desde los productos en la tienda
+const arrayBtnBuy = document.querySelectorAll('[data-id]');
+arrayBtnBuy.forEach((btn) => btn.addEventListener("click", (e) => {
+    id = (e.target.dataset.id);
+    console.log("El ID es : ", id);
+    idString = "quantityBtn" + id;
+    console.log("el id a buscar es ", idString);
 
-//Pruebo de forma mas reducida capturar los productos y cantidades
-// arrayBtnBuy.forEach((btn) => addEventListener("click", (e) => {
-//     id = (e.target.dataset.id);
-//     console.log("El ID es : ", id);
-//     idString = "" + id + "";
-//     idString = "quantityBtn" + idString;
-//     console.log("el id a buscar es ", idString);
+    const quantity = document.getElementById([idString]);
+    console.log("El valor de quantity es :", quantity.value);
+    quantity.addEventListener('change', addToBuyCart(id, parseInt(quantity.value)));
+}));
 
-//     const quantity = document.getElementById([idString]);
-//     console.log("El valor de quantity es :", quantity.value);
-//     quantity.addEventListener('change', addToBuyCart(id, parseInt(quantity.value)));
-// }));
+//Funcion para remarcar el producto elegido de la tienda
+function remarkProduct(id) {
+    let btnId = "sendBtn" + id;
+    let imgId = "image" + id;
+    $('#' + btnId).on('click', (e) => {
+        $('#' + imgId).css('border', 'solid');
+    });
+}
+
+// id = 1;
+// let prueba = "sendBtn" + id;
+// //Remarco las imagenes de los productos elegidos
+// $({ prueba }).on('click', (e) => {
+//     $('#image1').css('border', 'solid');
+// });
+// $('#sendBtn2').on('click', (e) => {
+//     $('#image2').css('border', 'solid');
+// });
+// $('#sendBtn3').on('click', (e) => {
+//     $('#image3').css('border', 'solid');
+// });
+// $('#sendBtn4').on('click', (e) => {
+//     $('#image4').css('border', 'solid');
+// });
+// $('#sendBtn5').on('click', (e) => {
+//     $('#image5').css('border', 'solid');
+// });
+// $('#sendBtn6').on('click', (e) => {
+//     $('#image6').css('border', 'solid');
+// });
+// $('#sendBtn7').on('click', (e) => {
+//     $('#image7').css('border', 'solid');
+// });
+// $('#sendBtn8').on('click', (e) => {
+//     $('#image8').css('border', 'solid');
+// });
+// $('#sendBtn9').on('click', (e) => {
+//     $('#image9').css('border', 'solid');
+// });
 
 //$('.card1').fadeIn("slow");
 
 // $("#sendBtn1").on('click', (e) => {
 //     (this).css('border', 'solid');
 // });
-
-
-//Remarco las imagenes de los productos elegidos
-$('#sendBtn1').on('click', (e) => {
-    $('#image1').css('border', 'solid');
-});
-$('#sendBtn2').on('click', (e) => {
-    $('#image2').css('border', 'solid');
-});
-$('#sendBtn3').on('click', (e) => {
-    $('#image3').css('border', 'solid');
-});
-$('#sendBtn4').on('click', (e) => {
-    $('#image4').css('border', 'solid');
-});
-$('#sendBtn5').on('click', (e) => {
-    $('#image5').css('border', 'solid');
-});
-$('#sendBtn6').on('click', (e) => {
-    $('#image6').css('border', 'solid');
-});
-$('#sendBtn7').on('click', (e) => {
-    $('#image7').css('border', 'solid');
-});
-$('#sendBtn8').on('click', (e) => {
-    $('#image8').css('border', 'solid');
-});
-$('#sendBtn9').on('click', (e) => {
-    $('#image9').css('border', 'solid');
-});
