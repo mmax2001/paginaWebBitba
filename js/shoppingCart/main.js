@@ -8,12 +8,16 @@ class Producto {
         this.cantidad = parseInt(cantidad);
         this.stock = parseInt(stock);
         this.vendido = false;
-        this.valorTotal = this.precio * this.cantidad;
+        const factorIVA = parseFloat(1.21);
+        this.valorTotal = this.precio * factorIVA;
+        const precioFinal = this.valorTotal * cantidad;
+    }
+    valorFinal() {
+        return precioFinal;
     }
     sumarIva() {
-        this.precio = this.precio * 1.21;
+        this.precio = this.precio * factorIVA;
     }
-
     set updateStock(cantidad) {
         this.stock = this.stock - cantidad;
     }
@@ -68,6 +72,8 @@ function addToBuyCart(id, cant) {
             carrito.push(almacen.find(Producto => Producto.id == id));
             carrito[carrito.length - 1].cantidad = cant;
             carrito[carrito.length - 1].updateStock = cant;
+            carrito[carrito.length - 1].valorFinal;
+            console.log("EL PRECIO TOTAL ES :", carrito[carrito.length - 1].valorFinal);
         } else {
             console.log("esta el id");
             for (let i = 0; i < carrito.length; i++) {
@@ -81,6 +87,9 @@ function addToBuyCart(id, cant) {
 
         //Agrego al badge la cantidad total de items
         addToBadge(carrito);
+
+        localStorage.setItem('productosCarrito', JSON.stringify(carrito));
+        console.log(window.localStorage.length);
 
         //Modifico la leyenda de agregar al carrito si no tengo stock
         const prodItem = carrito.find(Producto => Producto.id == id);
@@ -125,8 +134,8 @@ function totalQuantity(carrito) {
 }
 
 //Almaceno en el storage el contenido del carrito
-localStorage.setItem('productosCarrito', JSON.stringify(carrito));
-console.log(window.localStorage.length);
+// localStorage.setItem('productosCarrito', JSON.stringify(carrito));
+// console.log(window.localStorage.length);
 
 //Obtengo un array con todos los valores de cantidades capturadas
 //desde los productos en la tienda

@@ -2,6 +2,10 @@ const carrito = JSON.parse(localStorage.getItem('productosCarrito')) || [];
 console.log("el carrito es :", carrito);
 const items = carrito.map((producto) => new(Producto(producto)));
 console.log(items);
+
+const template = document.getElementById("template");
+const templeteEndBuy = document.getElementById("templateEndBuy");
+const finalPrice = document.getElementById("finalPrice");
 //Creo la clase Producto
 
 class Producto {
@@ -60,7 +64,7 @@ $('#mostrarStock').on('click', (e) => {
     });
 });
 
-const api = 'https://apiv2.bitcoinaverage.com/indices/local/ticker/short?crypto=BTC&fiat=USD'
+const api = 'piv2.bitcoinaverage.com/indices/local/ticker/short?crypto=BTC&fiat=USD'
 $.get(api, p => {
     document.querySelector('#pre').textContent = JSON.stringify(p, null, 2)
 });
