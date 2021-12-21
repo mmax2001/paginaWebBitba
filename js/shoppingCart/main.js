@@ -10,10 +10,10 @@ class Producto {
         this.vendido = false;
         const factorIVA = parseFloat(1.21);
         this.valorTotal = this.precio * factorIVA;
-        const precioFinal = this.valorTotal * cantidad;
+        this.precioFinal = this.valorTotal * cantidad;
     }
     valorFinal() {
-        return precioFinal;
+        this.precioFinal;
     }
     sumarIva() {
         this.precio = this.precio * factorIVA;
@@ -30,7 +30,7 @@ class Producto {
 
 const almacen = [];
 const carrito = [];
-almacen.push(new Producto("cable adaptador cpu fuente", 600.99, 1, 0, 20));
+almacen.push(new Producto("cable adaptador cpu fuente", 450.00, 1, 0, 20));
 almacen.push(new Producto("riser adaptador 1x a 16x", 1200.99, 2, 0, 20));
 almacen.push(new Producto("riser adaptador multiple", 6200.99, 3, 0, 20));
 almacen.push(new Producto("breakout board 12 salidas", 2200.99, 4, 0, 20));
@@ -65,21 +65,27 @@ console.log(window.localStorage.length);
 //Pregunto si id esta incluido al carrito, se agrega en la ultima posicion
 //si el id ya estaba, actualizo la cantidad del item en el array
 function addToBuyCart(id, cant) {
-
+    let max = 20;
     if (cant > 0) {
         const result = carrito.find(Producto => Producto.id == id);
         if (result == undefined || carrito == []) {
             carrito.push(almacen.find(Producto => Producto.id == id));
             carrito[carrito.length - 1].cantidad = cant;
             carrito[carrito.length - 1].updateStock = cant;
+            max = carrito[carrito.length - 1].stock;
             carrito[carrito.length - 1].valorFinal;
-            console.log("EL PRECIO TOTAL ES :", carrito[carrito.length - 1].valorFinal);
         } else {
             console.log("esta el id");
             for (let i = 0; i < carrito.length; i++) {
                 if (carrito[i].id == id && ((carrito[i].stock) > 0)) {
-                    carrito[i].cantidad = carrito[i].cantidad + cant;
-                    carrito[i].updateStock = cant;
+                    if (cant > carrito[i].stock) {
+                        cant = carrito[i].stock;
+                        carrito[i].cantidad = carrito[i].cantidad + cant;
+                        carrito[i].updateStock = cant;
+                    } else {
+                        carrito[i].cantidad = carrito[i].cantidad + cant;
+                        carrito[i].updateStock = cant;
+                    }
                 }
             }
         }
@@ -99,7 +105,7 @@ function addToBuyCart(id, cant) {
             idBtn = "sendBtn" + id;
             console.log(idBtn);
             //$([idBtn]).val('SinStock');
-            $(`#${ idBtn }`).val('SinStock');
+            $(`#${ idBtn }`).attr('Agregar al carrito', 'SinStock');
         }
         //Remarco la imagen del producto seleccionado
         remarkProduct(id);
