@@ -8,9 +8,9 @@ class Producto {
         this.cantidad = parseInt(cantidad);
         this.stock = parseInt(stock);
         this.vendido = false;
-        const factorIVA = parseFloat(1.21);
-        this.valorTotal = this.precio * factorIVA;
-        this.precioFinal = this.valorTotal * cantidad;
+        const factorIVA = Math.round(parseFloat(1.21 * 100)) / 100;
+        this.valorTotal = Math.round(this.precio * factorIVA * 100) / 100;
+        this.precioFinal = Math.round(this.valorTotal * cantidad * 100) / 100;
     }
     valorFinal() {
         this.precioFinal;
@@ -65,7 +65,7 @@ console.log(window.localStorage.length);
 //Pregunto si id esta incluido al carrito, se agrega en la ultima posicion
 //si el id ya estaba, actualizo la cantidad del item en el array
 function addToBuyCart(id, cant) {
-    let max = 20;
+    let max;
     if (cant > 0) {
         const result = carrito.find(Producto => Producto.id == id);
         if (result == undefined || carrito == []) {
@@ -103,9 +103,9 @@ function addToBuyCart(id, cant) {
             // idBtn = "'#sendBtn" + id + "'";
             // console.log(idBtn);
             idBtn = "sendBtn" + id;
-            console.log(idBtn);
+            console.log("EL ID DE BOTON ES :", idBtn);
             //$([idBtn]).val('SinStock');
-            $(`#${ idBtn }`).attr('Agregar al carrito', 'SinStock');
+            $("#" + idBtn).html('Producto Sin Stock');
         }
         //Remarco la imagen del producto seleccionado
         remarkProduct(id);

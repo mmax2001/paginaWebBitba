@@ -786,6 +786,13 @@ select {
     position: relative;
     left: 30px;
   }
+
+  .btn-danger {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

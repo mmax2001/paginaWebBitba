@@ -2,14 +2,15 @@
 class Producto {
     constructor(nombre, precio, id, cantidad, stock) {
         this.nombre = nombre;
-        this.precio = parseFloat(precio);
+        this.precio = (parseFloat(precio)).toFixed(2);
         this.id = parseInt(id);
         this.cantidad = parseInt(cantidad);
         this.stock = parseInt(stock);
         this.vendido = false;
-        const factorIVA = parseFloat(1.21);
-        this.valorTotal = this.precio * factorIVA;
-        this.precioFinal = this.valorTotal * cantidad;
+        //const factorIVA = parseFloat(1.21);
+        const factorIVA = Math.round(parseFloat(1.21 * 100)) / 100;
+        this.valorTotal = Math.round(this.precio * factorIVA * 100) / 100;
+        this.precioFinal = Math.round(this.valorTotal * cantidad * 100) / 100;
     }
     valorFinal() {
         this.precioFinal;
@@ -43,12 +44,12 @@ document.addEventListener("click", (e) => {
 
     // console.log(e.target.matches(".list-group-item .btn-success"));
     if (e.target.matches(".list-group-item .btn-success")) {
-        btnAumentar(e);
+        btnIncrementar(e);
     }
 
     // console.log(e.target.matches(".list-group-item .btn-danger"));
     if (e.target.matches(".list-group-item .btn-danger")) {
-        btnDisminuir(e);
+        btnDecrementar(e);
     }
 });
 
@@ -86,7 +87,7 @@ const generateCart = () => {
 
 generateCart();
 
-const btnAumentar = (e) => {
+const btnIncrementar = (e) => {
     //console.log(e.target.dataset.id);
     items = items.map((item) => {
         if (item.id == e.target.dataset.id) {
@@ -98,7 +99,7 @@ const btnAumentar = (e) => {
     generateCart();
 };
 
-const btnDisminuir = (e) => {
+const btnDecrementar = (e) => {
     // console.log(e.target.dataset.id);
     items = items.filter((item) => {
         // console.log(item);
@@ -131,7 +132,7 @@ $('#mostrarStock').on('click', (e) => {
     $.getJSON('prod.json', (respuesta, status) => {
         if (status === 'success') {
             respuesta.forEach((prod) => {
-                $('.container').append(`${prod.nombre}-${prod.cantidad}<br>`);
+                $('.container mt-3').append(`${prod.nombre}-${prod.cantidad}<br>`);
             });
         };
     });
