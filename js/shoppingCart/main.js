@@ -52,18 +52,11 @@ console.log(window.localStorage.length);
 // console.log(carrito);
 
 //Capturo los eventos en cada boton "Agregar al carrito"
-//y en el numero seleccionado de cantidad de items
-
-// const sendButton1 = document.getElementById("sendBtn1");
-// sendButton1.addEventListener('click', (event) => {
-//     const quantity1 = document.getElementById("quantityBtn1");
-//     quantity1.addEventListener('change', addToBuyCart(parseInt(1), parseInt(quantity1.value)));
-// })
-
-
-//Creo la funcion agregar al carrito
+//y en el numero seleccionado de cantidad de items.
+//Creo la funcion addToBuyCart para agregar al carrito.
 //Pregunto si id esta incluido al carrito, se agrega en la ultima posicion
-//si el id ya estaba, actualizo la cantidad del item en el array
+//si el id ya estaba, actualizo la cantidad del item en el array.
+
 function addToBuyCart(id, cant) {
     let max;
     if (cant > 0) {
@@ -94,25 +87,31 @@ function addToBuyCart(id, cant) {
         //Agrego al badge la cantidad total de items
         addToBadge(carrito);
 
+        //Guardo en localStorage para acceder a los items luego, desde 
+        //la seccion finalizarCompra
         localStorage.setItem('productosCarrito', JSON.stringify(carrito));
         console.log(window.localStorage.length);
 
-        //Modifico la leyenda de agregar al carrito si no tengo stock
-        const prodItem = carrito.find(Producto => Producto.id == id);
-        if (prodItem.stock == 0) {
-            // idBtn = "'#sendBtn" + id + "'";
-            // console.log(idBtn);
-            idBtn = "sendBtn" + id;
-            console.log("EL ID DE BOTON ES :", idBtn);
-            //$([idBtn]).val('SinStock');
-            $("#" + idBtn).html('Producto Sin Stock');
-        }
+        //Modifico la leyenda del boton "Agregar al carrito" si no tengo stock
+        changeBtnText(id);
         //Remarco la imagen del producto seleccionado
         remarkProduct(id);
     }
 }
 
+//Modifico la leyenda del boton "Agregar al carrito" si no tengo stock
+
+function changeBtnText(id) {
+    const prodItem = carrito.find(Producto => Producto.id == id);
+    if (prodItem.stock == 0) {
+        idBtn = "sendBtn" + id;
+        //console.log("EL ID DE BOTON ES :", idBtn);
+        $("#" + idBtn).html('Producto Sin Stock');
+    }
+}
+
 //Agrego al badge la cantidad total de items
+
 function addToBadge(arrayCart) {
     let cartTotalDesktop = document.getElementById('lblCartCountDesktop');
     let cartTotalMobile = document.getElementById('lblCartCountMobile');
@@ -130,6 +129,7 @@ function addToBadge(arrayCart) {
 }
 
 //Recorro el array carrito para calcular la cantidad de items elegidos
+
 function totalQuantity(carrito) {
     let totalItems = 0;
     for (const item of carrito) {
@@ -139,25 +139,23 @@ function totalQuantity(carrito) {
     return (totalItems);
 }
 
-//Almaceno en el storage el contenido del carrito
-// localStorage.setItem('productosCarrito', JSON.stringify(carrito));
-// console.log(window.localStorage.length);
-
 //Obtengo un array con todos los valores de cantidades capturadas
 //desde los productos en la tienda
+
 const arrayBtnBuy = document.querySelectorAll('[data-id]');
 arrayBtnBuy.forEach((btn) => btn.addEventListener("click", (e) => {
     id = (e.target.dataset.id);
-    console.log("El ID es : ", id);
+    //console.log("El ID es : ", id);
     idString = "quantityBtn" + id;
-    console.log("el id a buscar es ", idString);
+    //console.log("el id a buscar es ", idString);
 
     const quantity = document.getElementById([idString]);
-    console.log("El valor de quantity es :", quantity.value);
+    //console.log("El valor de quantity es :", quantity.value);
     quantity.addEventListener('change', addToBuyCart(id, parseInt(quantity.value)));
 }));
 
 //Funcion para remarcar el producto elegido de la tienda
+
 function remarkProduct(id) {
     let btnId = "sendBtn" + id;
     let imgId = "image" + id;
@@ -165,40 +163,3 @@ function remarkProduct(id) {
         $('#' + imgId).css('border', 'solid');
     });
 }
-
-// id = 1;
-// let prueba = "sendBtn" + id;
-// //Remarco las imagenes de los productos elegidos
-// $({ prueba }).on('click', (e) => {
-//     $('#image1').css('border', 'solid');
-// });
-// $('#sendBtn2').on('click', (e) => {
-//     $('#image2').css('border', 'solid');
-// });
-// $('#sendBtn3').on('click', (e) => {
-//     $('#image3').css('border', 'solid');
-// });
-// $('#sendBtn4').on('click', (e) => {
-//     $('#image4').css('border', 'solid');
-// });
-// $('#sendBtn5').on('click', (e) => {
-//     $('#image5').css('border', 'solid');
-// });
-// $('#sendBtn6').on('click', (e) => {
-//     $('#image6').css('border', 'solid');
-// });
-// $('#sendBtn7').on('click', (e) => {
-//     $('#image7').css('border', 'solid');
-// });
-// $('#sendBtn8').on('click', (e) => {
-//     $('#image8').css('border', 'solid');
-// });
-// $('#sendBtn9').on('click', (e) => {
-//     $('#image9').css('border', 'solid');
-// });
-
-//$('.card1').fadeIn("slow");
-
-// $("#sendBtn1").on('click', (e) => {
-//     (this).css('border', 'solid');
-// });
