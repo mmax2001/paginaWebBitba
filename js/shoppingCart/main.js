@@ -9,7 +9,7 @@ class Producto {
         this.stock = parseInt(stock);
         this.vendido = false;
         const factorIVA = Math.round(parseFloat(1.21 * 100)) / 100;
-        this.valorTotal = Math.round(this.precio * factorIVA * 100) / 100;
+        this.valorTotal = (this.precio * factorIVA * 100).toFixed(2);
         this.precioFinal = Math.round(this.valorTotal * cantidad * 100) / 100;
     }
     valorFinal() {

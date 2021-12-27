@@ -9,7 +9,7 @@ class Producto {
         this.vendido = false;
         //const factorIVA = parseFloat(1.21);
         const factorIVA = Math.round(parseFloat(1.21 * 100)) / 100;
-        this.valorTotal = Math.round(this.precio * factorIVA * 100) / 100;
+        this.valorTotal = (this.precio * factorIVA * 100).toFixed(2);
         this.precioFinal = Math.round(this.valorTotal * cantidad * 100) / 100;
     }
     valorFinal() {
@@ -62,7 +62,7 @@ const generateFinalPrice = () => {
         total = total + items[i].valorTotal * items[i].cantidad;
     };
     const clone = templateFooter.content.cloneNode(true);
-    clone.querySelector("p span").textContent = total;
+    clone.querySelector("p span").textContent = total.toFixed(2);
 
     // fragment.appendChild(clone);
     footer.appendChild(clone);
@@ -76,7 +76,7 @@ const generateCart = () => {
         const clone = template.content.cloneNode(true);
         clone.querySelector(".text-white .lead").textContent = item.nombre;
         clone.querySelector(".rounded-pill").textContent = item.cantidad;
-        clone.querySelector("div .lead span").textContent = item.valorTotal * item.cantidad;
+        clone.querySelector("div .lead span").textContent = (item.valorTotal * item.cantidad).toFixed(2);
         clone.querySelector(".btn-success").dataset.id = item.id;
         clone.querySelector(".btn-danger").dataset.id = item.id;
         fragment.appendChild(clone);
@@ -170,7 +170,23 @@ $('#mostrarStock').on('click', (e) => {
     });
 });
 
-const api = 'piv2.bitcoinaverage.com/indices/local/ticker/short?crypto=BTC&fiat=USD'
+const api = 'https://api.coingecko.com/api/v3/simple/price?ids=BTC&vs_currencies=USD&include_last_updated_at=true'
 $.get(api, p => {
-    document.querySelector('#pre').textContent = JSON.stringify(p, null, 2)
+    console.log(p.price)
 });
+
+var settings = {
+    "url": "https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT",
+    "method": "GET",
+    "timeout": 0,
+};
+
+$.ajax(settings).done(function(response) {
+    console.log(response);
+});
+
+fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT')
+    .then(r => r.json()
+        .then(j => document.querySelector('#pre').textContent = "Precio BTC : USD " + parseFloat(btcPrice = j.price).toFixed(2)));
+
+//console.log(parseFloat(j.price).toFixed(2))));
