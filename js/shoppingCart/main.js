@@ -139,8 +139,17 @@ function totalQuantity(carrito) {
     return (totalItems);
 }
 
+//Funcion para remarcar el producto elegido de la tienda
+
+function remarkProduct(id) {
+    let btnId = "sendBtn" + id;
+    let imgId = "image" + id;
+    $('#' + imgId).css({ 'border': 'solid', 'color': '#353333' });
+}
+
 //Obtengo un array con todos los valores de cantidades capturadas
-//desde los productos en la tienda
+//desde los productos en la tienda y luego proceso la cantidad seleccionada
+//usando addTuBuyCart
 
 const arrayBtnBuy = document.querySelectorAll('[data-id]');
 arrayBtnBuy.forEach((btn) => btn.addEventListener("click", (e) => {
@@ -153,13 +162,3 @@ arrayBtnBuy.forEach((btn) => btn.addEventListener("click", (e) => {
     //console.log("El valor de quantity es :", quantity.value);
     quantity.addEventListener('change', addToBuyCart(id, parseInt(quantity.value)));
 }));
-
-//Funcion para remarcar el producto elegido de la tienda
-
-function remarkProduct(id) {
-    let btnId = "sendBtn" + id;
-    let imgId = "image" + id;
-    $('#' + btnId).on('click', (e) => {
-        $('#' + imgId).css('border', 'solid');
-    });
-}

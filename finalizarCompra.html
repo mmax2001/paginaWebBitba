@@ -32,15 +32,14 @@
 
 <body>
     <main>
-        <h2>Listado de Articulos en Carrito de Compras</h2>
-        <div class="container">
-            <p id="pre"></p>
-            <section class="container mt-3">
-                <ul class="list-group" id="carrito"></ul>
-            </section>
+        <h1 class="animate__animated animate__flipInY" style="margin-bottom: 30px;margin-top: 30px;">Listado de Articulos en Carrito de Compras</h2>
+            <div class="container">
 
-            <footer id="footer" class="container mt-3">
-                <template id="templateFooter">
+                <section class="container mt-3">
+                    <ul class="list-group" id="carrito"></ul>
+                </section>
+                <footer id="footer" class="container mt-3">
+                    <template id="templateFooter">
                     <div class="card">
                         <div class="card-body d-flex justify-content-between align-items-center">
                             <p class="lead mb-0">TOTAL: $<span>1500</span></p>
@@ -51,11 +50,12 @@
                                 <p>Gracias por confiar en Bitba, ante cualquier duda o inconveniente no dude en consultarnos!</p> 
                                 </div>
                             </div> 
-                        </div>
+                        </div>                        
                     </div>
-                </template>
-            </footer>
-            <!-- <ul class="list-group" id="cart"></ul>
+                    </template>
+                </footer>
+
+                <!-- <ul class="list-group" id="cart"></ul>
             <div id="finalList">
                 <li class="list-group-item bg-secondary text-white">
                     <span class="badge bg-primary rounded-pill align-middle">3</span>
@@ -77,12 +77,14 @@
                     <button class="btn btn-outline-primary">Finalizar compra</button>
                 </div>
             </div> -->
-            <div id="showStock" class="container mt-3">
-                <button id="mostrarStock" type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Ver Stock</button>
+                <p id="pre" style="margin-left: 20px;">BTC Precio</p>
+                <div id="showStock" class="container mt-3">
+                    <button id="mostrarStock" type="button" class="btn btn-primary btn-sm mr-1 my-1"><i class="fa fa-shopping-cart pr-2"></i>Ver Stock</button>
+                </div>
             </div>
-        </div>
 
     </main>
+
     <!-- apertura de pie de pagina -->
     <!-- remover container para tener el footer con full width. -->
     <footer class="container my-5">
