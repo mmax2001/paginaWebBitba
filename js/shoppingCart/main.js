@@ -30,26 +30,48 @@ class Producto {
 
 const almacen = [];
 const carrito = [];
-almacen.push(new Producto("cable adaptador cpu fuente", 450.00, 1, 0, 20));
-almacen.push(new Producto("riser adaptador 1x a 16x", 1200.99, 2, 0, 20));
-almacen.push(new Producto("riser adaptador multiple", 6200.99, 3, 0, 20));
-almacen.push(new Producto("breakout board 12 salidas", 2200.99, 4, 0, 20));
-almacen.push(new Producto("fuente servidor 1400w", 40200, 5, 0, 20));
-almacen.push(new Producto("estructura de rig para 5 gpus", 11200, 6, 0, 20));
-almacen.push(new Producto("rig de mineria 7 gpus", 1120000, 7, 0, 20));
-almacen.push(new Producto("rig de mineria 7 gpus", 1304000, 8, 0, 20));
-almacen.push(new Producto("rig de mineria 7 gpus", 1650000, 9, 0, 20));
 
-//Almaceno en el storage el contenido del alamacen
+//Cargo en el array almacen la lista de mis productos
+//usar estas lineas de codigo en el caso de no hacer uso de AJAX
+// almacen.push(new Producto("cable adaptador cpu fuente", 450.00, 1, 0, 20));
+// almacen.push(new Producto("riser adaptador 1x a 16x", 1200.99, 2, 0, 20));
+// almacen.push(new Producto("riser adaptador multiple", 6200.99, 3, 0, 20));
+// almacen.push(new Producto("breakout board 12 salidas", 2200.99, 4, 0, 20));
+// almacen.push(new Producto("fuente servidor 1400w", 40200, 5, 0, 20));
+// almacen.push(new Producto("estructura de rig para 5 gpus", 11200, 6, 0, 20));
+// almacen.push(new Producto("rig de mineria 7 gpus", 1120000, 7, 0, 20));
+// almacen.push(new Producto("rig de mineria 7 gpus", 1304000, 8, 0, 20));
+// almacen.push(new Producto("rig de mineria 7 gpus", 1650000, 9, 0, 20));
 
-localStorage.setItem('productosAlmacen', JSON.stringify(almacen));
-console.log(window.localStorage.length);
+
+// //Almaceno en el storage el contenido del alamacen
+// localStorage.setItem('productosAlmacen', JSON.stringify(almacen));
+// console.log(window.localStorage.length);
+
+
+//Hago uso de AJAX para traer del archivo prod.json los articulos y luego
+//cargarlos en el array almacen
+function loadStore() {
+
+    $.getJSON('./prod.json', (respuesta, status) => {
+        if (status === 'success') {
+            //console.log("Almacen contiene :", respuesta);
+            respuesta.forEach((prod) => {
+                almacen.push(prod);
+            });
+        };
+    });
+    //console.log("Array almacen AJAX", almacen);
+}
+
+loadStore();
 
 //Compruebo por consola contenidos en arrays almacen y carrito
 
 // console.log(almacen);
 // console.log(almacen[0]);
 // console.log(carrito);
+
 
 //Capturo los eventos en cada boton "Agregar al carrito"
 //y en el numero seleccionado de cantidad de items.
@@ -58,14 +80,15 @@ console.log(window.localStorage.length);
 //si el id ya estaba, actualizo la cantidad del item en el array.
 
 function addToBuyCart(id, cant) {
-    let max;
+    //let max;
     if (cant > 0) {
         const result = carrito.find(Producto => Producto.id == id);
         if (result == undefined || carrito == []) {
             carrito.push(almacen.find(Producto => Producto.id == id));
             carrito[carrito.length - 1].cantidad = cant;
             carrito[carrito.length - 1].updateStock = cant;
-            max = carrito[carrito.length - 1].stock;
+            //max = carrito[carrito.length - 1].stock;
+            carrito[carrito.length - 1].stock = carrito[carrito.length - 1].stock - cant;
             carrito[carrito.length - 1].valorFinal;
         } else {
             console.log("esta el id");
@@ -94,9 +117,35 @@ function addToBuyCart(id, cant) {
 
         //Modifico la leyenda del boton "Agregar al carrito" si no tengo stock
         changeBtnText(id);
+
         //Remarco la imagen del producto seleccionado
         remarkProduct(id);
+
+        //Actualizo el stock de los productos en almacen
+        updateStore(id, cant);
+
+        //Almaceno en el storage el contenido del alamacen
+        localStorage.setItem('productosAlmacen', JSON.stringify(almacen));
+        console.log(window.localStorage.length);
+
     }
+}
+
+//Creo la funcion para actualizar el stock del almacen
+
+function updateStore(id, quantity) {
+    console.log("ACTUALIZO");
+    const index = almacen.findIndex((item) => item.id == id);
+    console.log("El indice es ", index);
+    console.log("el almacen tiene este stock", almacen[index].stock);
+    if (quantity <= almacen[index].stock) {
+        almacen[index].stock = almacen[index].stock - quantity;
+        console.log("el almacen tiene este stock", almacen[index].stock);
+    } else {
+        quantity = almacen[index].stock;
+        almacen[index].stock = almacen[index].stock - quantity;
+        almacen[index].cantidad = almacen[index].cantidad + quantity;
+    };
 }
 
 //Modifico la leyenda del boton "Agregar al carrito" si no tengo stock
@@ -135,7 +184,7 @@ function totalQuantity(carrito) {
     for (const item of carrito) {
         totalItems = totalItems + parseInt(item.cantidad);
     }
-    console.log(totalItems);
+    //console.log(totalItems);
     return (totalItems);
 }
 

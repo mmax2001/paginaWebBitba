@@ -1,0 +1,90 @@
+[{
+        "nombre": "cable adaptador cpu fuente",
+        "precio": 450.00,
+        "id": 1,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "riser adaptador 1x a 16x",
+        "precio": 1200.99,
+        "id": 2,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "riser adaptador multiple",
+        "precio": 6200.99,
+        "id": 3,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "breakout board 12 salidas",
+        "precio": 2200.99,
+        "id": 4,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "fuente servidor 1400w",
+        "precio": 40200,
+        "id": 5,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "estructura de rig para 5 gpus",
+        "precio": 11200,
+        "id": 6,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "rig de mineria 7 gpus",
+        "precio": 1120000,
+        "id": 7,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "rig de mineria 7 gpus",
+        "precio": 1304000,
+        "id": 8,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    },
+
+    {
+        "nombre": "rig de mineria 7 gpus",
+        "precio": 1650000,
+        "id": 9,
+        "cantidad": 0,
+        "stock": 20,
+        "vendido": "false",
+        "valorTotal": 0
+    }
+]
