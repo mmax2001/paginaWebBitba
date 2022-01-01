@@ -61,7 +61,7 @@ function loadStore() {
             });
         };
     });
-    //console.log("Array almacen AJAX", almacen);
+    console.log("Array almacen AJAX", almacen);
 }
 
 loadStore();
@@ -72,6 +72,23 @@ loadStore();
 // console.log(almacen[0]);
 // console.log(carrito);
 
+//Creo la funcion para actualizar el stock del almacen
+
+function updateStore(id, quantity) {
+
+    const index = almacen.findIndex((item) => item.id == id);
+    if (quantity <= almacen[index].stock) {
+        //almacen[index].updateStock = quantity;
+        almacen[index].cantidad = almacen[index].cantidad + quantity;
+        almacen[index].stock = almacen[index].stock - quantity;
+        //console.log("el almacen tiene este stock", almacen[index].stock);
+    } else {
+        quantity = almacen[index].stock;
+        almacen[index].stock = almacen[index].stock - quantity;
+        almacen[index].cantidad = almacen[index].cantidad + quantity;
+    };
+}
+
 
 //Capturo los eventos en cada boton "Agregar al carrito"
 //y en el numero seleccionado de cantidad de items.
@@ -80,18 +97,17 @@ loadStore();
 //si el id ya estaba, actualizo la cantidad del item en el array.
 
 function addToBuyCart(id, cant) {
-    //let max;
+    var maxCant = cant;
     if (cant > 0) {
         const result = carrito.find(Producto => Producto.id == id);
         if (result == undefined || carrito == []) {
             carrito.push(almacen.find(Producto => Producto.id == id));
             carrito[carrito.length - 1].cantidad = cant;
             carrito[carrito.length - 1].updateStock = cant;
-            //max = carrito[carrito.length - 1].stock;
             carrito[carrito.length - 1].stock = carrito[carrito.length - 1].stock - cant;
             carrito[carrito.length - 1].valorFinal;
         } else {
-            console.log("esta el id");
+            //console.log("esta el id");
             for (let i = 0; i < carrito.length; i++) {
                 if (carrito[i].id == id && ((carrito[i].stock) > 0)) {
                     if (cant > carrito[i].stock) {
@@ -122,7 +138,7 @@ function addToBuyCart(id, cant) {
         remarkProduct(id);
 
         //Actualizo el stock de los productos en almacen
-        updateStore(id, cant);
+        updateStore(id, maxCant);
 
         //Almaceno en el storage el contenido del alamacen
         localStorage.setItem('productosAlmacen', JSON.stringify(almacen));
@@ -133,20 +149,20 @@ function addToBuyCart(id, cant) {
 
 //Creo la funcion para actualizar el stock del almacen
 
-function updateStore(id, quantity) {
-    console.log("ACTUALIZO");
-    const index = almacen.findIndex((item) => item.id == id);
-    console.log("El indice es ", index);
-    console.log("el almacen tiene este stock", almacen[index].stock);
-    if (quantity <= almacen[index].stock) {
-        almacen[index].stock = almacen[index].stock - quantity;
-        console.log("el almacen tiene este stock", almacen[index].stock);
-    } else {
-        quantity = almacen[index].stock;
-        almacen[index].stock = almacen[index].stock - quantity;
-        almacen[index].cantidad = almacen[index].cantidad + quantity;
-    };
-}
+// function updateStore(id, quantity) {
+//     console.log("ACTUALIZO");
+//     const index = almacen.findIndex((item) => item.id == id);
+//     console.log("El indice es ", index);
+//     console.log("el almacen tiene este stock", almacen[index].stock);
+//     if (quantity <= almacen[index].stock) {
+//         almacen[index].stock = almacen[index].stock - quantity;
+//         console.log("el almacen tiene este stock", almacen[index].stock);
+//     } else {
+//         quantity = almacen[index].stock;
+//         almacen[index].stock = almacen[index].stock - quantity;
+//         almacen[index].cantidad = almacen[index].cantidad + quantity;
+//     };
+// }
 
 //Modifico la leyenda del boton "Agregar al carrito" si no tengo stock
 
