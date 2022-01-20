@@ -18,6 +18,6 @@
   "homepage": "https://github.com/mmax2001/paginaWebBitba#readme",
   "devDependencies": {
     "node-sass": "^6.0.1",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.15"
   }
 }
