@@ -158,10 +158,14 @@ if (document.getElementById("btnModal")) {
 const almacenStock = JSON.parse(localStorage.getItem('productosAlmacen'));
 var itemsAlmacen = almacenStock.map((producto) => (new Producto(producto.nombre, producto.precio, producto.id, producto.cantidad, producto.stock)));
 console.log(itemsAlmacen);
+var clicking=true;
 $('#mostrarStock').on('click', (e) => {
+    if(clicking){
     itemsAlmacen.forEach((prod) => {
         $('#tableStock').append(`<br>Producto : ${prod.nombre} - Unidades Disponibles :${prod.stock}<br><br>`);
     });
+    }
+    clicking=false;   
 });
 
 
